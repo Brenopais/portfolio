@@ -211,3 +211,62 @@ section {
 
 
 
+/* Animação da aba de Emails*/
+.contato-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.2rem;
+}
+
+.contato-form form {
+  position: relative;
+  width: 600px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px var(--segunda-cor-fundo);
+  background: #000000;
+  color: var(--cor-texto);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffdb58;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--cor-principal);
+  font-size: 15px;
+}
+
+form .enviarbotao {
+  display: inline-block;
+  padding: 11px 26px;
+  background: var(--cor-principal);
+  color: var(--cor-fundo);
+  border: 2px solid var(--cor-texto);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .50s ease;
+}
+
+form .enviarbotao:hover {
+  background: transparent;
+  color: var(--cor-principal);
+  box-shadow: 0 0 20px var(--cor-principal);
+  cursor: pointer;
+
+}
+
