@@ -267,6 +267,32 @@ form .enviarbotao:hover {
   color: var(--cor-principal);
   box-shadow: 0 0 20px var(--cor-principal);
   cursor: pointer;
-
 }
+
+.footer {
+  padding: 12px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.copyright p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--cor-texto);
+}
+
+.scroll-inicio i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-principal);
+  width: 40px;
+  height: 40px;
+  color: #000000;
+  font-size: 30px;
+  border-radius: 50%;
+} 
 
