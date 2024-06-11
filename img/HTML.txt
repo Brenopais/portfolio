@@ -56,53 +56,51 @@
     </section>
 
 
-    <!-- Skills -->
+<!-- Skills -->
 <section class="habilidades" id="habilidades"> 
+    <h2>HABILIDADES</h2><br>
     <div class="skills-section">
-        <div class="faixa"></div>
-            <h2>MINHAS HABILIDADES</h2>
-        <div class="faixa"></div>
-        <h3>FRONT-END</h3>
+        <h3>Front-End</h3>
         <div class="skills-container">
             <div class="skill-card">
                 <i class='bx bxl-html5'></i>
                 <h3>HTML5</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>  
             <div class="skill-card">
                 <i class='bx bxl-css3'></i>
                 <h3>CSS3</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>  
             <div class="skill-card">
                 <i class='bx bxl-javascript'></i>
                 <h3>JavaScript</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>  
             <div class="skill-card">
                 <i class='bx bxl-bootstrap'></i>
                 <h3>Bootstrap</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>
         </div>
     </div>
     <div class="skills-section">
-        <h3>BACK-END</h3>
+        <h3>Back-End</h3>
         <div class="skills-container">
             <div class="skill-card">
                 <i class='bx bxl-git'></i>
                 <h3>Git</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>
             <div class="skill-card">
                 <i class="ri-copyright-fill"></i>
                 <h3>C#</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>
             <div class="skill-card">
                 <i class="ri-database-2-fill"></i>
                 <h3>SQL Server</h3>
-                <p></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
             </div>
         </div>
     </div>
@@ -112,38 +110,32 @@
 
         <!-- Projetos -->
         <section class="projetos" id="projetos">
-            <div class="faixa"></div>
             <h2>PROJETOS</h2>
-            <div class="faixa"></div>
             <!-- Adicione seus projetos aqui -->
         </section>
     
         <!-- Certificados -->
         <section class="certificados" id="certificados">
-            <div class="faixa"></div>
-                <h2>CERTIFICADOS</h2>
-            <div class="faixa"></div>
+            <h2>CERTIFICADOS</h2>
             <!-- Adicione seus certificados aqui -->
         </section>
     
         <!-- Contato -->
         <section class="Contato" id="contato">
             <div class="conteiner-texto">
-                <div class="faixa"></div>
-                <h2>ENTRE EM CONTATO</h2>
-                <div class="faixa"></div>
+                <h2>Entre em contato</h2>
             </div>
+
             <div class="contato-form">
                 <form action="">
                     <input type="text" placeholder="Digite seu nome" required>
                     <input type="email" placeholder="Digite seu endereço de email.." required>
-                    <textarea name="" id="" cols="30" rows="7" placeholder="Digite uma mensagem.." required></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Digite uma mensagem.." required></textarea>
                     <input type="submit" name="" value="Enviar Mensagem" class="enviarbotao">
                 </form>
             </div>
         </section>
 
-        <!-- Rodapé  -->
         <div class="footer">
             <div class="footer-container">
                 <div class="copyright">
