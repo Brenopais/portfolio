@@ -1,30 +1,30 @@
 /* Reset CSS */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'inter', sans-serif;
+  font-family: 'inter', Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
-/* Variáveis*/
+/* Variáveis */
 :root {
+  --cor-fundo: #020617;
   --cor-texto: #ffffff;
-  --cor-fundo: #0D1117;
-  --segunda-cor-fundo: #0D1117; 
   --cor-principal: #ffdb58;
-  --outra-cor: #1A1D24;
+  --segunda-cor-fundo: #0D1117;
+  --outra-cor: #13131F;
 }
 
-/*estilo do texto e fundo geral*/
+/* Estilo do texto e fundo geral */
 body {
   color: var(--cor-texto);
   background-color: var(--cor-fundo);
 }
 
-/* estilo da barra de navegação*/
+/* Estilo da barra de navegação */
 header {
   position: fixed;
   width: 100%;
@@ -35,48 +35,45 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 30px 12%;
-  background: transparent;
   transition: all 0.50s ease;
 }
 
-
+/* Estilo da imagem de perfil */
 .perfil-img {
   display: flex;
   align-items: center;
-  height: auto; /* Mantém a proporção da imagem */
-  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+  height: auto;
+  max-height: 100%;
   border-radius: 3%;
-  margin-left: auto; /* Move a imagem para a direita */
+  margin: auto;
 }
 
-
-
-header.logo{
+/* Estilo do cabeçalho com logo */
+header.logo {
   background: var(--cor-fundo);
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
   padding: 16px 16%;
 }
 
-/*Estilo do logo tipo */
+/* Estilo do logo tipo */
 .logo {
-  font-size: 26px;
+  font-size: 22px;
   color: var(--cor-texto);
-  font-weight: 600;
+  font-weight:bold;
 }
 
-/*Cor do logo web*/
+/* Cor do logo web */
 span {
   color: var(--cor-principal);
 }
 
-/*Barra de pesquisa do meio*/
-.lista {
+/* Barra de pesquisa do meio */
+.menu {
   display: flex;
 }
 
-
-/*Barra de pesquisa do meio com links*/
-.lista a {
+/* Barra de pesquisa do meio com links */
+.menu a {
   font-size: 1rem;
   color: var(--cor-texto);
   font-weight: 500;
@@ -84,8 +81,8 @@ span {
   transition: all 0.50s ease;
 }
 
-/*Animação da barra de pesquisa do meio com links*/
-.lista a:hover {
+/* Animação da barra de pesquisa do meio com links */
+.menu a:hover {
   color: var(--cor-principal);
 }
 
@@ -94,29 +91,21 @@ section {
   padding: 180px 12% 90px;
 }
 
-/*botao menu */
-#menu-icon {
-  font-size: 35px;
-  z-index: 10001;
-  cursor: pointer;
-  display: none;
-}
-
-/*botao contato */
+/* Botão contato */
 .contato {
   display: inline-block;
-  padding: 7px 16px;
+  padding: 5px 10px;
   background: var(--cor-principal);
   color: var(--cor-fundo);
-  border: 2px solid var(--cor-principal);
-  border-radius: 7px;
+  border: 3px solid var(--cor-principal);
+  border-radius: 5px;
   font-size: 15px;
   font-weight: 600;
   transition: all 0.50s ease;
-  margin-left: 12px;
+  margin-left: 25px;
 }
 
-/* animação do botao contato */
+/* Animação do botão contato */
 .contato:hover {
   background: var(--cor-principal);
   color: var(--cor-fundo);
@@ -124,23 +113,23 @@ section {
   transform: scale(1.1);
 }
 
-
-/* Apresentação do titulo do meio*/
-.principal {
+/* Apresentação do título do meio */
+.sobre {
   height: 100vh;
   width: 100%;
   background-position: top right;
   background-size: cover;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: flex-start;
 }
 
-/* Apresentação titulo e paragrafo*/
+/* Apresentação título e parágrafo */
 .descricao h4 {
   font-size: 1.5rem;
   color: var(--cor-texto);
 }
+
 .descricao h1 {
   font-size: 4.5rem;
   color: var(--cor-texto);
@@ -148,18 +137,18 @@ section {
   margin: 20px 0px 20px;
   line-height: 1.2;
 }
+
 .descricao p {
   font-size: 1rem;
   font-weight: 400;
-  width: 620px; 
+  width: 620px;
   max-width: 100%;
   color: var(--cor-texto);
   line-height: 30px;
   margin-bottom: 15px;
 }
 
-
-/* estilização dos 2 botões*/
+/* Estilização dos 2 botões */
 .meubotao, .meubotao2 {
   display: inline-block;
   padding: 11px 26px;
@@ -170,11 +159,12 @@ section {
   font-weight: 500;
   transition: all 0.50s ease;
 }
+
 .meubotao2 {
   margin-left: 5px;
 }
 
-/* animação dos 2 botões*/
+/* Animação dos 2 botões */
 .meubotao:hover, .meubotao2:hover {
   background: var(--cor-principal);
   color: var(--cor-fundo);
@@ -182,10 +172,11 @@ section {
   transform: scale(1.1);
 }
 
-/* estilização das Redes sociais*/
+/* Estilização das redes sociais */
 .social {
   margin-bottom: 40px;
 }
+
 .social i {
   display: inline-flex;
   align-items: center;
@@ -202,61 +193,41 @@ section {
   transition: all 0.50s ease;
 }
 
-/* Animação das Redes sociais*/
+/* Animação das redes sociais */
 .social i:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px var(--cor-principal);
 }
 
-
-
 /* Seção de Habilidades */
-.faixa {
-  width: 100%;
-  height: 2px; /* Altura da faixa */
-  background-color: var(--cor-principal); /* Cor da faixa */
-  margin: 20px auto; /* Espaçamento entre a faixa e os elementos adjacentes */
-}
-
-.habilidades {  
-  padding: 20px 0;
-  text-align: center;
-
-}
-
 .habilidades h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 30px;
-  margin-bottom: 30px;
-}
-
-
-.skills-section {
-  margin-bottom: 30px;
 }
 
 .skills-section h3 {
   margin-bottom: 20px;
-  font-size: 20px; /* Aumenta o tamanho da fonte */
+  font-size: 20px;
   color: var(--cor-texto);
-  padding-bottom: 10px; /* Espaçamento entre a linha de separação e os cartões */
 }
 
 .skills-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .skill-card {
-  background: #1f1f1f;
-  border-radius: 10px;
+  background: #13131F;
+  border-radius: 4px;
   padding: 25px;
-  width: 150px;
+  justify-content: center;
   text-align: center;
+  width: 190px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Adicionando transição suave para a escala e a cor da borda */
 }
 
 .skill-card i {
@@ -268,16 +239,110 @@ section {
 .skill-card h3 {
   font-size: 18px;
   color: var(--cor-principal);
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .skill-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Ajustando a escala ao passar o mouse */
+  border: 2px solid var(--cor-principal); /* Definindo a cor da borda no hover */
+}
+
+/* Animação da aba projeto*/
+.portfolio {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.portfolio-item {
+  background-color: var(--outra-cor);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.portfolio-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.portfolio-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.portfolio-description {
+  font-size: 16px;
+}
+
+
+/* Animação da aba certificados */
+.certificados {
+  padding: 80px 0;
+  background-color: var(--cor-fundo);
+}
+
+.certificados .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.certificados .section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.certificado {
+  background-color: #13131F;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.certificado-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.certificado-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.certificado-description {
+  font-size: 16px;
 }
 
 
 
-/* Animação da aba de Emails*/
+/* Animação da aba de Emails */
 .contato-form {
   display: flex;
   align-items: center;
@@ -285,11 +350,10 @@ section {
   margin-top: 2.2rem;
 }
 
-/* tamanho do texto do titulo E-mail*/
+/* Tamanho do texto do título E-mail */
 .conteiner-texto h2 {
-  font-size: 30px; 
+  font-size: 30px;
 }
-
 
 .contato-form form {
   position: relative;
@@ -303,7 +367,7 @@ form textarea {
   border: none;
   outline: none;
   box-shadow: 0 0 5px var(--segunda-cor-fundo);
-  background: #000000;
+  background: #13131F;
   color: var(--cor-texto);
   margin-bottom: 20px;
   border-radius: 8px;
@@ -341,20 +405,21 @@ form .enviarbotao:hover {
   cursor: pointer;
 }
 
+/* Estilização do Rodapé */
 .footer {
-  background: #000000;
+  background: var(--cor-fundo);
   padding: 12px 0;
   display: flex;
-  justify-content: center; /* Centraliza o contêiner do rodapé */
+  justify-content: center;
 }
 
 .footer-container {
   width: 100%;
-  max-width: 1200px; /* Defina uma largura máxima para o contêiner */
+  max-width: 1200px;
   display: flex;
-  justify-content: space-between; /* Espaça os itens dentro do contêiner */
+  justify-content: space-between;
   align-items: center;
-  padding: 0 8%; /* Mesmo padding usado nas seções */
+  padding: 0 8%;
 }
 
 .copyright {
@@ -367,6 +432,7 @@ form .enviarbotao:hover {
   color: var(--cor-texto);
 }
 
+/* Botão de rolar para o início */
 .scroll-inicio {
   display: inline-flex;
   align-items: center;
@@ -374,7 +440,7 @@ form .enviarbotao:hover {
   background-color: var(--cor-principal);
   width: 40px;
   height: 40px;
-  color: #000000;
+  color: var(--cor-fundo);
   font-size: 30px;
   border-radius: 50%;
   cursor: pointer;
