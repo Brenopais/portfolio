@@ -247,8 +247,8 @@ section {
   border: 2px solid var(--cor-principal); /* Definindo a cor da borda no hover */
 }
 
-/* Animação da aba projeto*/
-.portfolio {
+/* Seção de Projetos */
+.projeto {
   padding: 80px 0;
   background-color: var(--cor-fundo);
 }
@@ -256,42 +256,71 @@ section {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 100px;
 }
 
 .section-title {
   text-align: center;
   font-size: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  color: var(--cor-principal);
 }
 
-.portfolio-grid {
+.projeto-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Reduzi ainda mais a largura mínima dos cards */
+  gap: 10px; /* Reduzi ainda mais o gap entre os cards */
 }
 
-.portfolio-item {
+.projeto-item {
   background-color: var(--outra-cor);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px; /* Reduzi o padding para tornar o card mais compacto */
+  max-width: 100%; /* Defini uma largura máxima para os cards */
+  margin: auto; /* Centraliza os cards na tela */
 }
 
-.portfolio-image {
+.projeto-item:hover {
+  transform: scale(1.03); /* Reduzi a escala do efeito hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajustei a sombra para o efeito hover */
+}
+
+.projeto-image {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  border-radius: 8px; /* Reduzi o raio da borda da imagem */
+  margin-bottom: 5px; /* Reduzi o margin-bottom para ajustar o espaçamento */
 }
 
-.portfolio-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+.projeto-title {
+  font-size: 14px; /* Reduzi ainda mais o tamanho da fonte do título */
+  margin-bottom: 10px; /* Reduzi o espaço entre o título e a descrição */
+  color: var(--cor-principal);
+  text-align: center;
 }
 
-.portfolio-description {
-  font-size: 16px;
+.projeto-description {
+  font-size: 15px; /* Reduzi ainda mais o tamanho da fonte da descrição */
+  color: var(--cor-texto);
+  text-align: center;
 }
+
+.project-links {
+  display: flex;
+  justify-content: center;
+}
+
+.github-link, .live-link {
+  margin: 0 3px; /* Reduzi ainda mais a margem dos links */
+  font-size: 16px; /* Reduzi o tamanho dos ícones */
+  color: var(--cor-principal);
+  transition: color 0.3s;
+}
+
+.github-link:hover, .live-link:hover {
+  color: var(--cor-texto);
+}
+
 
 
 /* Animação da aba certificados */
@@ -314,16 +343,20 @@ section {
 
 .certificados-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduzi o valor mínimo da largura dos itens */
   gap: 40px;
 }
+
 
 .certificado {
   background-color: #13131F;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px; /* Reduzi o padding para tornar o card mais compacto */
+  max-width: 240px; /* Defini uma largura máxima para os cards */
+  margin: auto; /* Centraliza os cards na tela */
 }
+
 
 .certificado-image {
   width: 100%;
