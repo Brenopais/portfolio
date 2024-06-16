@@ -14,3 +14,17 @@ window.addEventListener("scroll", () => {
     lastScrollTop = currentScroll;
 });
 
+
+// Seleciona os elementos relevantes
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const certificadosWrapper = document.querySelector('.certificados-wrapper');
+
+// Adiciona ouvintes de evento aos botões
+prevBtn.addEventListener('click', () => {
+    certificadosWrapper.scrollLeft -= 250; // Ajuste a quantidade de rolagem conforme necessário
+});
+
+nextBtn.addEventListener('click', () => {
+    certificadosWrapper.scrollLeft += 250; // Ajuste a quantidade de rolagem conforme necessário
+});

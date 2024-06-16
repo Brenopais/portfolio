@@ -59,7 +59,7 @@ header.logo {
 .logo {
   font-size: 22px;
   color: var(--cor-texto);
-  font-weight:bold;
+  font-weight: bold;
 }
 
 /* Cor do logo web */
@@ -149,7 +149,8 @@ section {
 }
 
 /* Estilização dos 2 botões */
-.meubotao, .meubotao2 {
+.meubotao,
+.meubotao2 {
   display: inline-block;
   padding: 11px 26px;
   background: var(--cor-principal);
@@ -268,39 +269,39 @@ section {
 
 .projeto-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Reduzi ainda mais a largura mínima dos cards */
-  gap: 10px; /* Reduzi ainda mais o gap entre os cards */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste a largura mínima dos cards */
+  gap: 20px; /* Ajuste o espaçamento entre os cards */
 }
 
 .projeto-item {
   background-color: var(--outra-cor);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px; /* Reduzi o padding para tornar o card mais compacto */
-  max-width: 100%; /* Defini uma largura máxima para os cards */
-  margin: auto; /* Centraliza os cards na tela */
+  padding: 15px; /* Ajuste o padding dos cards */
+  max-width: 100%; /* Defina a largura máxima dos cards */
+  margin: auto; /* Centralize os cards na tela */
 }
 
 .projeto-item:hover {
-  transform: scale(1.03); /* Reduzi a escala do efeito hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajustei a sombra para o efeito hover */
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projeto-image {
   width: 100%;
-  border-radius: 8px; /* Reduzi o raio da borda da imagem */
-  margin-bottom: 5px; /* Reduzi o margin-bottom para ajustar o espaçamento */
+  border-radius: 8px;
+  margin-bottom: 10px; /* Ajuste o margin-bottom para ajustar o espaçamento */
 }
 
 .projeto-title {
-  font-size: 14px; /* Reduzi ainda mais o tamanho da fonte do título */
-  margin-bottom: 10px; /* Reduzi o espaço entre o título e a descrição */
+  font-size: 18px; /* Ajuste o tamanho da fonte do título */
+  margin-bottom: 10px;
   color: var(--cor-principal);
   text-align: center;
 }
 
 .projeto-description {
-  font-size: 15px; /* Reduzi ainda mais o tamanho da fonte da descrição */
+  font-size: 14px; /* Ajuste o tamanho da fonte da descrição */
   color: var(--cor-texto);
   text-align: center;
 }
@@ -311,10 +312,15 @@ section {
 }
 
 .github-link, .live-link {
-  margin: 0 3px; /* Reduzi ainda mais a margem dos links */
-  font-size: 16px; /* Reduzi o tamanho dos ícones */
+  margin: 0 5px; /* Ajuste a margem dos links */
+  font-size: 18px; /* Aumente o tamanho da fonte dos links */
   color: var(--cor-principal);
   transition: color 0.3s;
+}
+
+.github-link i, .live-link i {
+  font-size: 24px; /* Aumente o tamanho dos ícones */
+  margin-right: 5px; /* Adicione margem à direita dos ícones */
 }
 
 .github-link:hover, .live-link:hover {
@@ -373,6 +379,92 @@ section {
   font-size: 16px;
 }
 
+.certificados-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.certificados-wrapper {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.scroll-btn:hover {
+  color: #ffdb58; /* Cor dos ícones ao passar o mouse */
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Tamanho do círculo */
+  height: 40px; /* Tamanho do círculo */
+  border-radius: 50%; /* Transforma o elemento em um círculo */
+  background-color: #fff; /* Cor de fundo do círculo */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+.certificado {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  /* Outros estilos para os certificados */
+}
+
+.scroll-btn {
+  /* Estilos comuns para ambos os botões */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333; /* Cor dos ícones */
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s; /* Adiciona uma transição suave de cor */
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.certificado {
+    flex: 0 0 auto; /* Evita que os certificados se estiquem */
+    scroll-snap-align: start; /* Define a posição inicial do scroll */
+    margin-right: 20px; /* Espaçamento entre os certificados */
+    /* Outros estilos para os certificados */
+}
+
+/* Estilizando a barra de rolagem */
+.certificados-carousel::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+/* Estilizando o botão da barra de rolagem */
+.certificados-carousel::-webkit-scrollbar-thumb {
+  background-color: #ffdb58; /* Cor do botão da barra de rolagem */
+  border-radius: 4px; /* Borda arredondada do botão */
+}
+
+/* Estilizando a área de rolagem da barra de rolagem */
+.certificados-carousel::-webkit-scrollbar-track {
+  background-color: #020617; /* Cor da área de rolagem */
+}
 
 
 /* Animação da aba de Emails */
