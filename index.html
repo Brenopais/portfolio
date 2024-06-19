@@ -14,23 +14,26 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Cabeçalho -->
     <header>
         <a href="#" class="logo">Desenvolvedor <span>Web</span></a>
-        <div class="menu-icon" id="menu-icon"></div>
         <nav>
             <ul class="menu">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#certificados">Certificados</a></li>
-                <li><a href="#contato">contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <li><a href="#lightDark" class="lightDark">Dark</a></li>
+        <!-- Botão Light-Dark -->
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class='bx bx-sun'></i> <!-- Ícone de sol para light mode -->
+            <i class='bx bx-moon'></i> <!-- Ícone de lua para dark mode -->
+        </button>
     </header>
     
     <main>
@@ -56,47 +59,47 @@
             <img src="img/fundoperfil.png" alt="breno" class="perfil-img">
         </section>
 
-<!-- Skills -->
-<section class="habilidades" id="habilidades"> 
-    <div class="skills-section">
-        <h2>MINHAS HABILIDADES.</h2>
+        <!-- Skills -->
+        <section class="habilidades" id="habilidades"> 
+            <div class="skills-section">
+                <h2>MINHAS HABILIDADES.</h2>
 
-        <div class="skills-container">
-            <div class="skill-card">
-                <i class='bx bxl-git'></i>
-                <h3>GIT</h3>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <i class='bx bxl-git'></i>
+                        <h3>GIT</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class='bx bxl-html5'></i>
+                        <h3>HTML5</h3>
+                    </div>  
+                    <div class="skill-card">
+                        <i class='bx bxl-css3'></i>
+                        <h3>CSS3</h3>
+                    </div>  
+                    <div class="skill-card">
+                        <i class='bx bxl-javascript'></i>
+                        <h3>JAVASCRIPT</h3>
+                    </div>  
+                    <div class="skill-card">
+                        <i class='bx bxl-bootstrap'></i>
+                        <h3>BOOTSTRAP</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>CSHARP</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class='bx bx-server'></i>
+                        <h3>SQL SERVER</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class='bx bxl-figma'></i>
+                        <h3>FIGMA</h3>
+                    </div>
+                </div>    
             </div>
-            <div class="skill-card">
-                <i class='bx bxl-html5'></i>
-                <h3>HTML5</h3>
-            </div>  
-            <div class="skill-card">
-                <i class='bx bxl-css3'></i>
-                <h3>CSS3</h3>
-            </div>  
-            <div class="skill-card">
-                <i class='bx bxl-javascript'></i>
-                <h3>JAVASCRIPT</h3>
-            </div>  
-            <div class="skill-card">
-                <i class='bx bxl-bootstrap'></i>
-                <h3>BOOTSTRAP</h3>
-            </div>
-            <div class="skill-card">
-                <i class='bx bx-code-alt'></i>
-                <h3>CSHARP</h3>
-            </div>
-            <div class="skill-card">
-                <i class='bx bx-server' ></i>
-                <h3>SQL SERVER</h3>
-            </div>
-            <div class="skill-card">
-                <i class='bx bxl-figma' ></i>
-                <h3>FIGMA</h3>
-            </div>
-        </div>    
-    </div>
-</section>
+        </section>
 
         <!-- Projetos -->
         <section class="projeto" id="projetos">
@@ -134,56 +137,54 @@
             </div>
         </section>
 
-<!-- Certificados -->
-<section class="certificados" id="certificados">
-    <div class="container">
-        <h2 class="section-title">CERTIFICADOS.</h2>
-        <div class="certificados-carousel"> <!-- Adiciona a classe certificados-carousel -->
-            <button class="scroll-btn prev-btn">
-                <div class="circle"> <!-- Div para o círculo -->
-                    <i class="bx bx-chevron-left"></i> <!-- Ícone da seta para a esquerda -->
-                </div>
-            </button>
-            <div class="certificados-wrapper"> <!-- Wrapper para os certificados -->
-                <div class="certificado">
-                    <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
-                    <h3 class="certificado-title">Certificado 1</h3>
-                    <p class="certificado-description">Descrição breve do certificado 1.</p>
-                </div>
-                <div class="certificado">
-                    <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
-                    <h3 class="certificado-title">Certificado 1</h3>
-                    <p class="certificado-description">Descrição breve do certificado 1.</p>
-                </div>
-                <div class="certificado">
-                    <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
-                    <h3 class="certificado-title">Certificado 1</h3>
-                    <p class="certificado-description">Descrição breve do certificado 1.</p>
-                </div>
-                <div class="certificado">
-                    <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
-                    <h3 class="certificado-title">Certificado 1</h3>
-                    <p class="certificado-description">Descrição breve do certificado 1.</p>
-                </div>
-                <div class="certificado">
-                    <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
-                    <h3 class="certificado-title">Certificado 1</h3>
-                    <p class="certificado-description">Descrição breve do certificado 1.</p>
+        <!-- Certificados -->
+        <section class="certificados" id="certificados">
+            <div class="container">
+                <h2 class="section-title">CERTIFICADOS.</h2>
+                <div class="certificados-carousel">
+                    <button class="scroll-btn prev-btn">
+                        <div class="circle">
+                            <i class="bx bx-chevron-left"></i>
+                        </div>
+                    </button>
+                    <div class="certificados-wrapper">
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                    </div>
+                    <button class="scroll-btn next-btn">
+                        <div class="circle">
+                            <i class="bx bx-chevron-right"></i>
+                        </div>
+                    </button>
                 </div>
             </div>
-            <button class="scroll-btn next-btn">
-                <div class="circle"> <!-- Div para o círculo -->
-                    <i class="bx bx-chevron-right"></i> <!-- Ícone da seta para a direita -->
-                </div>
-            </button>
-        </div>
-    </div>
-</section>
-
-
+        </section>
 
         <!-- Contato -->
-        <section class="email" id="email">
+        <section class="email" id="contato">
             <div class="conteiner-texto">
                 <h2>ENTRE EM CONTATO.</h2>
             </div>
@@ -202,14 +203,13 @@
     <div class="footer">
         <div class="footer-container">
             <div class="copyright">
-                <p>© 2024 | Breno Pais</p>
+                <p>© 2024 | Criado por Breno Pais 👨🏻‍💻</p>
             </div>
             <a href="#sobre" class="scroll-inicio">
                 <i class='bx bx-chevron-up'></i>
             </a>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

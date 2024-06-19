@@ -1,0 +1,329 @@
+/* Media Queries */
+
+/* Estilos para dispositivos com largura máxima de 1200px */
+@media (max-width: 1200px) {
+  header {
+    padding: 20px 10%;
+  }
+
+  .menu a {
+    margin-left: 20px;
+    font-size: 0.9rem;
+  }
+
+  .descricao h1 {
+    font-size: 3.5rem;
+  }
+
+  .descricao p {
+    font-size: 0.9rem;
+  }
+
+  .meubotao, .meubotao2 {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .skills-container {
+    padding: 3rem;
+  }
+
+  .skill-card {
+    width: 150px;
+  }
+
+  .certificados .container {
+    padding: 0 15px;
+  }
+
+  form input, form textarea {
+    padding: 15px;
+  }
+
+  form .enviarbotao {
+    padding: 9px 22px;
+    font-size: 14px;
+  }
+}
+
+/* Estilos para dispositivos com largura máxima de 992px */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 8%;
+  }
+
+  .menu a {
+    margin-left: 15px;
+    font-size: 0.85rem;
+  }
+
+  .descricao h1 {
+    font-size: 3rem;
+  }
+
+  .descricao p {
+    font-size: 0.85rem;
+  }
+
+  .meubotao, .meubotao2 {
+    padding: 7px 15px;
+    font-size: 13px;
+  }
+
+  .skills-container {
+    padding: 2.5rem;
+  }
+
+  .skill-card {
+    width: 130px;
+  }
+
+  .certificados .container {
+    padding: 0 10px;
+  }
+
+  form input, form textarea {
+    padding: 12px;
+  }
+
+  form .enviarbotao {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .projeto-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/* Estilos para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 8%; /* Mantém o mesmo padding */
+    flex-direction: row; /* Retorna a direção do flexbox para row */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
+  .menu {
+    flex-direction: row; /* Retorna a direção do flexbox para row */
+    margin-top: 0; /* Remove a margem superior */
+  }
+
+  .menu a {
+    margin-left: 20px; /* Ajusta a margem entre os itens do menu */
+    margin-bottom: 0; /* Remove a margem inferior */
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .perfil-img {
+    padding: 10px 2%; /* Ajusta o padding do perfil */
+  }
+
+  .descricao {
+    align-items: flex-start; /* Alinha o texto à esquerda */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  .descricao h1 {
+    font-size: 3rem; /* Mantém o tamanho da fonte */
+  }
+
+  .descricao p {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .social i {
+    font-size: 20px; /* Diminui o tamanho dos ícones sociais */
+  }
+
+  .certificado {
+    max-width: 300px;
+  }
+
+  .certificados .container {
+    padding: 0 5px; /* Ajusta o padding */
+  }
+}
+
+/* Estilos para dispositivos com largura máxima de 425px */
+@media (max-width: 425px) {
+  header {
+    padding: 5px 2%; /* Ajusta o padding */
+  }
+
+  .menu {
+    flex-direction: column; /* Altera a direção do flexbox para column */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
+  .menu a {
+    margin: 5px 0; /* Ajusta a margem */
+    font-size: 0.7rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .perfil-img {
+    padding: 10px 2%; /* Mantém o mesmo padding */
+  }
+
+  .descricao {
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .descricao h1 {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .descricao p {
+    font-size: 0.7rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .social i {
+    font-size: 18px; /* Diminui o tamanho dos ícones sociais */
+  }
+
+  .certificados .container {
+    padding: 0 1px; /* Ajusta o padding */
+  }
+
+  .certificado {
+    max-width: 300px;
+  }
+
+  .certificado-card {
+    width: 100px; /* Diminui a largura dos cards de certificado */
+  }
+
+  footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+  }
+
+  footer p {
+    margin-bottom: 5px; /* Ajusta a margem inferior do texto no rodapé */
+  }
+
+  footer .arrow {
+    margin-top: 10px; /* Ajusta a margem superior da seta no rodapé */
+  }
+}
+
+/* Estilos para dispositivos com largura máxima de 375px */
+@media (max-width: 375px) {
+  header {
+    padding: 5px 2%; /* Ajusta o padding */
+  }
+
+  .menu {
+    flex-direction: column; /* Altera a direção do flexbox para column */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
+  .menu a {
+    margin: 5px 0; /* Ajusta a margem */
+    font-size: 0.65rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .perfil-img {
+    padding: 10px 2%; /* Mantém o mesmo padding */
+  }
+
+  .descricao {
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .descricao h1 {
+    font-size: 1.3rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .descricao p {
+    font-size: 0.6rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .social i {
+    font-size: 16px; /* Diminui o tamanho dos ícones sociais */
+  }
+
+  .certificados .container {
+    padding: 0 1px; /* Ajusta o padding */
+  }
+
+  .certificado-card {
+    width: 90px; /* Diminui a largura dos cards de certificado */
+  }
+
+  footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+  }
+
+  footer p {
+    margin-bottom: 5px; /* Ajusta a margem inferior do texto no rodapé */
+  }
+
+  footer .arrow {
+    margin-top: 10px; /* Ajusta a margem superior da seta no rodapé */
+  }
+}
+
+/* Estilos para dispositivos com largura máxima de 320px */
+@media (max-width: 320px) {
+  header {
+    padding: 5px 2%; /* Ajusta o padding */
+  }
+
+  .menu {
+    flex-direction: column; /* Altera a direção do flexbox para column */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
+  .menu a {
+    margin: 5px 0; /* Ajusta a margem */
+    font-size: 0.6rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .perfil-img {
+    padding: 10px 2%; /* Mantém o mesmo padding */
+  }
+
+  .descricao {
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .descricao h1 {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .descricao p {
+    font-size: 0.55rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .social i {
+    font-size: 14px; /* Diminui o tamanho dos ícones sociais */
+  }
+
+  .certificados .container {
+    padding: 0 1px; /* Ajusta o padding */
+  }
+
+  .certificado-card {
+    width: 80px; /* Diminui a largura dos cards de certificado */
+  }
+
+  footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+  }
+
+  footer p {
+    margin-bottom: 5px; /* Ajusta a margem inferior do texto no rodapé */
+  }
+
+  footer .arrow {
+    margin: auto;
+    margin-top: 10px; /* Ajusta a margem superior da seta no rodapé */
+  }
+}
+
+
+

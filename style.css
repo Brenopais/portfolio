@@ -5,23 +5,23 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'inter', Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
 /* Variáveis */
 :root {
-  --cor-fundo: #020617;
+  --cor-fundo: #0D1117;
   --cor-texto: #ffffff;
   --cor-principal: #ffdb58;
   --segunda-cor-fundo: #61006a;
-  --outra-cor: #13131F;
+  --outra-cor: #1D222B;
 }
 
 /* Estilo do texto e fundo geral */
 body {
   color: var(--cor-texto);
-  background-color: var(--cor-fundo);
+  background: var(--cor-fundo);
 }
 
 /* Estilo da barra de navegação */
@@ -55,7 +55,6 @@ header.logo {
   padding: 16px 16%;
 }
 
-
 /* Estilo do logo tipo */
 .logo {
   font-size: 22px;
@@ -76,6 +75,8 @@ span {
 /* Barra de pesquisa do meio com links */
 .menu a {
   font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
   color: var(--cor-texto);
   font-weight: 500;
   margin-left: 40px;
@@ -105,7 +106,7 @@ section {
   margin-left: 100px;
 }
 
-/* Animação do botão ligthDark */
+/* Animação do botão lightDark */
 .lightDark:hover {
   background: var(--cor-principal);
   color: var(--cor-fundo);
@@ -165,7 +166,8 @@ section {
 }
 
 /* Animação dos 2 botões */
-.meubotao:hover, .meubotao2:hover {
+.meubotao:hover,
+.meubotao2:hover {
   background: var(--cor-fundo);
   color: var(--cor-principal);
   box-shadow: 0 0 6px var(--cor-texto);
@@ -177,15 +179,15 @@ section {
 }
 
 .social i {
-  background: var(--cor-fundo);
+  background: #0D1117;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   color: var(--cor-principal);
-  border-radius: 50%;
-  backdrop-filter: brightness(88%);
+  border-radius: 100%;
+
   font-size: 25px;
   margin-right: 22px;
   box-shadow: 0 0 20px transparent;
@@ -217,7 +219,7 @@ section {
   padding: 10px;
   text-align: center;
   width: 175px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   transition: transform 0.3s ease, outline 0.3s ease;
 }
 
@@ -232,14 +234,11 @@ section {
 }
 
 .skill-card:hover {
-  outline: 2px solid var(--cor-principal); 
-  transform: scale(1.05); 
+  outline: 2px solid var(--cor-principal);
+  transform: scale(1.05);
 }
 
 /* Seção de Projetos */
-.projeto {
-  background-color: var(--cor-fundo);
-}
 
 .container {
   padding: 4rem;
@@ -254,19 +253,19 @@ section {
 .projeto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px; 
+  gap: 15px;
 }
 
 .projeto-item {
   background-color: var(--outra-cor);
   border-radius: 10px;
   padding: 9px;
-  max-width: 100%; 
-  margin: auto; 
+  max-width: 100%;
+  margin: auto;
 }
 
 .projeto-item:hover {
-  outline: 1px solid var(--cor-principal); 
+  outline: 1px solid var(--cor-principal);
 }
 
 .projeto-image {
@@ -276,14 +275,14 @@ section {
 }
 
 .projeto-title {
-  font-size: 18px; 
+  font-size: 18px;
   margin-bottom: 12px;
   color: var(--cor-principal);
   text-align: center;
 }
 
 .projeto-description {
-  font-size: 12px; /* Ajuste o tamanho da fonte da descrição */
+  font-size: 12px;
   color: var(--cor-texto);
   text-align: center;
 }
@@ -293,56 +292,23 @@ section {
   justify-content: center;
 }
 
-.github-link, .live-link {
-  margin: 0 10px; /* Ajuste a margem dos links */
-  font-size: 18px; /* Aumente o tamanho da fonte dos links */
+.github-link,
+.live-link {
+  margin: 0 10px;
+  font-size: 18px;
   color: var(--cor-principal);
   transition: color 0.3s;
 }
 
-.github-link i, .live-link i {
-  font-size: 24px; /* Aumente o tamanho dos ícones */
-  margin-right: 5px; /* Adicione margem à direita dos ícones */
+.github-link i,
+.live-link i {
+  font-size: 24px;
+  margin-right: 5px;
 }
 
-.github-link:hover, .live-link:hover {
-  color:var(--cor-texto);
-}
-
-/* Seção de Habilidades/skill */
-.habilidades h2 {
-  font-size: 30px;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 4rem;
-}
-
-.skill-card {
-  background: var(--outra-cor);
-  padding: 10px;
-  text-align: center;
-  width: 175px;
-  transition: transform 0.3s ease, outline 0.3s ease;
-}
-
-.skill-card i {
-  font-size: 30px;
-  color: var(--cor-principal);
-  margin-bottom: 10px;
-}
-
-.skill-card h3 {
-  font-size: 15px;
-}
-
-.skill-card:hover {
-  outline: 1px solid var(--cor-principal); /* Usar outline em vez de border */
-  transform: scale(1.05); /* Leve transformação de escala */
+.github-link:hover,
+.live-link:hover {
+  color: var(--cor-texto);
 }
 
 /* Animação da aba certificados */
@@ -363,23 +329,23 @@ section {
 
 .certificados-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduzi o valor mínimo da largura dos itens */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
 }
 
 .certificado {
   background-color: var(--outra-cor);
   border-radius: 15px;
-  padding: 15px; /* Aumentei o padding para tornar o card maior */
-  max-width: 520px; /* Aumentei a largura máxima dos cards */
-  margin: auto; /* Centraliza os cards na tela */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra ao redor dos cards */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+  padding: 15px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificado:hover {
-  transform: scale(1.05); /* Leve transformação de escala */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .certificado-image {
@@ -410,7 +376,7 @@ section {
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  transition: transform 0.2s ease-in-out; /* Transição mais rápida */
+  transition: transform 0.2s ease-in-out;
   padding-bottom: 20px;
 }
 
@@ -423,22 +389,22 @@ section {
   font-size: 24px;
   cursor: pointer;
   z-index: 20;
-  transition: background-color 0.3s ease; /* Transição suave para o fundo */
+  transition: background-color 0.3s ease;
 }
 
 .scroll-btn:hover .circle {
-  background-color: var(--cor-principal); /* Cor de fundo do círculo ao passar o mouse */
+  background-color: var(--cor-principal);
 }
 
 .circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Tamanho do círculo */
-  height: 40px; /* Tamanho do círculo */
-  border-radius: 50%; /* Transforma o elemento em um círculo */
-  background-color: var(--cor-texto); /* Cor de fundo do círculo */
-  transition: background-color 0.3s ease; /* Transição suave para o fundo */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-texto);
+  transition: background-color 0.3s ease;
 }
 
 .prev-btn {
@@ -450,11 +416,10 @@ section {
 }
 
 .certificado {
-  flex: 0 0 auto; /* Evita que os certificados se estiquem */
-  scroll-snap-align: start; /* Define a posição inicial do scroll */
-  margin-right: 20px; /* Espaçamento entre os certificados */
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 20px;
 }
-
 
 /* Animação da aba de Emails */
 .email-form {
@@ -521,7 +486,7 @@ form .enviarbotao:hover {
 
 /* Estilização do Rodapé */
 .footer {
-  background: var(--cor-fundo);
+  
   padding: 12px 0;
   display: flex;
   justify-content: center;
@@ -536,14 +501,12 @@ form .enviarbotao:hover {
   padding: 0 8%;
 }
 
-.copyright {
-  text-align: center;
-}
+
 
 .copyright p {
   font-size: 15px;
   font-weight: 400;
-  color: var(--cor-texto);
+  color: var(--cor-principal);
 }
 
 /* Botão de rolar para o início */

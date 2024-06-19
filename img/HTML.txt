@@ -27,10 +27,10 @@
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#certificados">Certificados</a></li>
-                <li><a href="#certificados">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <li><a href="#contato" class="contato">Dark</a></li>
+        <li><a href="#lightDark" class="lightDark">Dark</a></li>
     </header>
     
     <main>
@@ -39,7 +39,7 @@
             <div class="descricao">
                 <h4>Olá!</h4>
                 <h1>Sou o <span>Breno Pais</span></h1>
-                <p>Um estudante de Gestão de TI tenho 27 anos, Apaixonado por tecnologia. Meu objetivo é se tornar um profissional qualificado, buscando constantemente evolução para me tornar um desenvolvedor Full Stack. 
+                <p>Um estudante de Gestão de TI tenho 27 anos, Apaixonado por tecnologia. <br>Meu objetivo é se tornar um profissional qualificado, buscando constantemente evolução para me tornar um desenvolvedor Full Stack. <br>
                 No momento, estou em busca do meu primeiro emprego na área de desenvolvimento.</p>
                 <div class="social">
                     <a href="#"><i class="ri-linkedin-fill"></i></a>
@@ -53,7 +53,7 @@
                     <a href="#" class="meubotao2" download="meu_curriculo.pdf">Meu Currículo <i class='bx bxs-download'></i></a>
                 </div>
             </div>
-            <img src="img/perfil.png" alt="breno" class="perfil-img">
+            <img src="img/fundoperfil.png" alt="breno" class="perfil-img">
         </section>
 
         <!-- Skills -->
@@ -87,11 +87,11 @@
                         <h3>CSHARP</h3>
                     </div>
                     <div class="skill-card">
-                        <i class='bx bx-server' ></i>
+                        <i class='bx bx-server'></i>
                         <h3>SQL SERVER</h3>
                     </div>
                     <div class="skill-card">
-                        <i class='bx bxl-figma' ></i>
+                        <i class='bx bxl-figma'></i>
                         <h3>FIGMA</h3>
                     </div>
                 </div>    
@@ -99,72 +99,93 @@
         </section>
 
         <!-- Projetos -->
-        <section class="portfolio">
+        <section class="projeto" id="projetos">
             <div class="container">
-                <h2 class="section-title">PROJETOS</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="img/port-6.jpg" alt="Projeto 1" class="portfolio-image">
+                <h2 class="section-title">PROJETOS.</h2>
+                <div class="projeto-grid">
+                    <div class="projeto-item">
+                        <img src="img/port-6.jpg" alt="Projeto 1" class="projeto-image">
+                        <h3 class="projeto-title">Projeto 1</h3>
+                        <p class="projeto-description">Descrição breve do projeto 1.</p><br>
                         <div class="project-links">
+                            <a href="#" class="github-link"><i class="bx bxl-github"></i></a>
+                            <a href="#" class="live-link"><i class="bx bx-link-external"></i></a>
                         </div>
-                        <h3 class="portfolio-title">Projeto 1</h3>
-                        <p class="portfolio-description">Descrição breve do projeto 1.</p>
-                        <a href="#" class="github-link"><i class="bx bxl-github"></i></a>
-                        <a href="#" class="live-link">🌐</a>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="img/port-6.jpg" alt="Projeto 2" class="portfolio-image">
+                    <div class="projeto-item">
+                        <img src="img/port-6.jpg" alt="Projeto 2" class="projeto-image">
+                        <h3 class="projeto-title">Projeto 2</h3>
+                        <p class="projeto-description">Descrição breve do projeto 2.</p><br>
                         <div class="project-links">
+                            <a href="#" class="github-link"><i class="bx bxl-github"></i></a>
+                            <a href="#" class="live-link"><i class="bx bx-link-external"></i></a>
                         </div>
-                        <h3 class="portfolio-title">Projeto 2</h3>
-                        <p class="portfolio-description">Descrição breve do projeto 2.</p>
-                        <a href="#" class="github-link"><i class="bx bxl-github"></i></a>
-                        <a href="#" class="live-link">🌐</a>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="img/port-6.jpg" alt="Projeto 3" class="portfolio-image">
+                    <div class="projeto-item">
+                        <img src="img/port-6.jpg" alt="Projeto 3" class="projeto-image">
+                        <h3 class="projeto-title">Projeto 3</h3>
+                        <p class="projeto-description">Descrição breve do projeto 3.</p><br>
                         <div class="project-links">
+                            <a href="#" class="github-link"><i class="bx bxl-github"></i></a>
+                            <a href="#" class="live-link"><i class="bx bx-link-external"></i></a>
                         </div>
-                        <h3 class="portfolio-title">Projeto 3</h3>
-                        <p class="portfolio-description">Descrição breve do projeto 3.</p>
-                        <a href="#" class="github-link"><i class="bx bxl-github"></i></a>
-                        <a href="#" class="live-link">🌐</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-        <!-- Certificados -->
-        <section class="certificados">
-            <div class="container">
-                <h2 class="section-title">Certificados</h2>
-                <div class="certificados-grid">
-                    <div class="certificado">
-                        <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
-                        <h3 class="certificado-title">Certificado 1</h3>
-                        <p class="certificado-description">Descrição breve do certificado 1.</p>
-                    </div>
-                    <div class="certificado">
-                        <img src="img/certificado2.jpg" alt="Certificado 2" class="certificado-image">
-                        <h3 class="certificado-title">Certificado 2</h3>
-                        <p class="certificado-description">Descrição breve do certificado 2.</p>
-                    </div>
-                    <div class="certificado">
-                        <img src="img/certificado3.jpg" alt="Certificado 3" class="certificado-image">
-                        <h3 class="certificado-title">Certificado 3</h3>
-                        <p class="certificado-description">Descrição breve do certificado 3.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Certificados -->
+        <section class="certificados" id="certificados">
+            <div class="container">
+                <h2 class="section-title">CERTIFICADOS.</h2>
+                <div class="certificados-carousel">
+                    <button class="scroll-btn prev-btn">
+                        <div class="circle">
+                            <i class="bx bx-chevron-left"></i>
+                        </div>
+                    </button>
+                    <div class="certificados-wrapper">
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                        <div class="certificado">
+                            <img src="img/port-6.jpg" alt="Certificado 1" class="certificado-image">
+                            <h3 class="certificado-title">Certificado 1</h3>
+                            <p class="certificado-description">Descrição breve do certificado 1.</p>
+                        </div>
+                    </div>
+                    <button class="scroll-btn next-btn">
+                        <div class="circle">
+                            <i class="bx bx-chevron-right"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Contato -->
-        <section class="Contato" id="contato">
+        <section class="email" id="contato">
             <div class="conteiner-texto">
                 <h2>ENTRE EM CONTATO.</h2>
             </div>
-            <div class="contato-form">
+            <div class="email-form">
                 <form action="">
                     <input type="text" placeholder="Digite seu nome" required>
                     <input type="email" placeholder="Digite seu endereço de email.." required>
@@ -179,14 +200,13 @@
     <div class="footer">
         <div class="footer-container">
             <div class="copyright">
-                <p>© Todos os direitos reservados Breno Pais 2024.</p>
+                <p>© 2024 | Breno Pais</p>
             </div>
             <a href="#sobre" class="scroll-inicio">
                 <i class='bx bx-chevron-up'></i>
             </a>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
