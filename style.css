@@ -14,7 +14,7 @@
   --cor-fundo: #020617;
   --cor-texto: #ffffff;
   --cor-principal: #ffdb58;
-  --segunda-cor-fundo: #0D1117;
+  --segunda-cor-fundo: #61006a;
   --outra-cor: #13131F;
 }
 
@@ -44,7 +44,7 @@ header {
   align-items: center;
   height: auto;
   max-height: 100%;
-  border-radius: 3%;
+  border-radius: 10px;
   margin: auto;
 }
 
@@ -54,6 +54,7 @@ header.logo {
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
   padding: 16px 16%;
 }
+
 
 /* Estilo do logo tipo */
 .logo {
@@ -91,26 +92,23 @@ section {
   padding: 180px 12% 90px;
 }
 
-/* Botão contato */
-.contato {
+/* Botão lightDark */
+.lightDark {
   display: inline-block;
   padding: 5px 10px;
   background: var(--cor-principal);
   color: var(--cor-fundo);
   border: 3px solid var(--cor-principal);
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
-  transition: all 0.50s ease;
-  margin-left: 25px;
+  margin-left: 100px;
 }
 
-/* Animação do botão contato */
-.contato:hover {
+/* Animação do botão ligthDark */
+.lightDark:hover {
   background: var(--cor-principal);
   color: var(--cor-fundo);
-  box-shadow: 0 0 10px var(--cor-principal);
-  transform: scale(1.1);
 }
 
 /* Apresentação do título do meio */
@@ -122,6 +120,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: auto;
 }
 
 /* Apresentação título e parágrafo */
@@ -155,7 +154,7 @@ section {
   padding: 10px 20px;
   background: var(--cor-principal);
   color: var(--cor-fundo);
-  border-radius: 7px;
+  border-radius: 5px;
   font-size: 15px;
   font-weight: 500;
   transition: all 0.50s ease;
@@ -167,17 +166,18 @@ section {
 
 /* Animação dos 2 botões */
 .meubotao:hover, .meubotao2:hover {
-  background: var(--cor-principal);
-  color: var(--cor-fundo);
-  box-shadow: 0 0 10px var(--cor-principal);
+  background: var(--cor-fundo);
+  color: var(--cor-principal);
+  box-shadow: 0 0 6px var(--cor-texto);
 }
 
 /* Estilização das redes sociais */
 .social {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .social i {
+  background: var(--cor-fundo);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -186,8 +186,8 @@ section {
   color: var(--cor-principal);
   border-radius: 50%;
   backdrop-filter: brightness(88%);
-  font-size: 20px;
-  margin-right: 17px;
+  font-size: 25px;
+  margin-right: 22px;
   box-shadow: 0 0 20px transparent;
   cursor: pointer;
   transition: all 0.50s ease;
@@ -196,7 +196,7 @@ section {
 /* Animação das redes sociais */
 .social i:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px var(--cor-principal);
+  box-shadow: 0 0 10px var(--cor-principal);
 }
 
 /* Seção de Habilidades/skill */
@@ -217,7 +217,116 @@ section {
   padding: 10px;
   text-align: center;
   width: 175px;
-  box-sizing: border-box; /* Certifique-se de que padding e borda estão incluídos na largura */
+  box-sizing: border-box; 
+  transition: transform 0.3s ease, outline 0.3s ease;
+}
+
+.skill-card i {
+  font-size: 30px;
+  color: var(--cor-principal);
+  margin-bottom: 10px;
+}
+
+.skill-card h3 {
+  font-size: 15px;
+}
+
+.skill-card:hover {
+  outline: 2px solid var(--cor-principal); 
+  transform: scale(1.05); 
+}
+
+/* Seção de Projetos */
+.projeto {
+  background-color: var(--cor-fundo);
+}
+
+.container {
+  padding: 4rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.projeto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px; 
+}
+
+.projeto-item {
+  background-color: var(--outra-cor);
+  border-radius: 10px;
+  padding: 9px;
+  max-width: 100%; 
+  margin: auto; 
+}
+
+.projeto-item:hover {
+  outline: 1px solid var(--cor-principal); 
+}
+
+.projeto-image {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.projeto-title {
+  font-size: 18px; 
+  margin-bottom: 12px;
+  color: var(--cor-principal);
+  text-align: center;
+}
+
+.projeto-description {
+  font-size: 12px; /* Ajuste o tamanho da fonte da descrição */
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+}
+
+.github-link, .live-link {
+  margin: 0 10px; /* Ajuste a margem dos links */
+  font-size: 18px; /* Aumente o tamanho da fonte dos links */
+  color: var(--cor-principal);
+  transition: color 0.3s;
+}
+
+.github-link i, .live-link i {
+  font-size: 24px; /* Aumente o tamanho dos ícones */
+  margin-right: 5px; /* Adicione margem à direita dos ícones */
+}
+
+.github-link:hover, .live-link:hover {
+  color:var(--cor-texto);
+}
+
+/* Seção de Habilidades/skill */
+.habilidades h2 {
+  font-size: 30px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 4rem;
+}
+
+.skill-card {
+  background: var(--outra-cor);
+  padding: 10px;
+  text-align: center;
+  width: 175px;
   transition: transform 0.3s ease, outline 0.3s ease;
 }
 
@@ -236,102 +345,19 @@ section {
   transform: scale(1.05); /* Leve transformação de escala */
 }
 
-/* Seção de Projetos */
-.projeto {
-  padding: 60px;
-  background-color: var(--cor-fundo);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 100px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: var(--cor-principal);
-}
-
-.projeto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste a largura mínima dos cards */
-  gap: 20px; /* Ajuste o espaçamento entre os cards */
-}
-
-.projeto-item {
-  background-color: var(--outra-cor);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px; /* Ajuste o padding dos cards */
-  max-width: 100%; /* Defina a largura máxima dos cards */
-  margin: auto; /* Centralize os cards na tela */
-}
-
-.projeto-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.projeto-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px; /* Ajuste o margin-bottom para ajustar o espaçamento */
-}
-
-.projeto-title {
-  font-size: 18px; /* Ajuste o tamanho da fonte do título */
-  margin-bottom: 10px;
-  color: var(--cor-principal);
-  text-align: center;
-}
-
-.projeto-description {
-  font-size: 14px; /* Ajuste o tamanho da fonte da descrição */
-  color: var(--cor-texto);
-  text-align: center;
-}
-
-.project-links {
-  display: flex;
-  justify-content: center;
-}
-
-.github-link, .live-link {
-  margin: 0 5px; /* Ajuste a margem dos links */
-  font-size: 18px; /* Aumente o tamanho da fonte dos links */
-  color: var(--cor-principal);
-  transition: color 0.3s;
-}
-
-.github-link i, .live-link i {
-  font-size: 24px; /* Aumente o tamanho dos ícones */
-  margin-right: 5px; /* Adicione margem à direita dos ícones */
-}
-
-.github-link:hover, .live-link:hover {
-  color: var(--cor-texto);
-}
-
-
-
 /* Animação da aba certificados */
 .certificados {
   padding: 80px 0;
-  background-color: var(--cor-fundo);
 }
 
 .certificados .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .certificados .section-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 40px;
 }
 
@@ -341,16 +367,20 @@ section {
   gap: 40px;
 }
 
-
 .certificado {
-  background-color: #13131F;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px; /* Reduzi o padding para tornar o card mais compacto */
-  max-width: 240px; /* Defini uma largura máxima para os cards */
+  background-color: var(--outra-cor);
+  border-radius: 15px;
+  padding: 15px; /* Aumentei o padding para tornar o card maior */
+  max-width: 520px; /* Aumentei a largura máxima dos cards */
   margin: auto; /* Centraliza os cards na tela */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra ao redor dos cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
 }
 
+.certificado:hover {
+  transform: scale(1.05); /* Leve transformação de escala */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
 
 .certificado-image {
   width: 100%;
@@ -361,10 +391,12 @@ section {
 .certificado-title {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .certificado-description {
   font-size: 16px;
+  text-align: center;
 }
 
 .certificados-carousel {
@@ -378,11 +410,24 @@ section {
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: transform 0.2s ease-in-out; /* Transição mais rápida */
   padding-bottom: 20px;
 }
 
-.scroll-btn:hover {
-  color: #ffdb58; /* Cor dos ícones ao passar o mouse */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20;
+  transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+.scroll-btn:hover .circle {
+  background-color: var(--cor-principal); /* Cor de fundo do círculo ao passar o mouse */
 }
 
 .circle {
@@ -392,71 +437,27 @@ section {
   width: 40px; /* Tamanho do círculo */
   height: 40px; /* Tamanho do círculo */
   border-radius: 50%; /* Transforma o elemento em um círculo */
-  background-color: #fff; /* Cor de fundo do círculo */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
+  background-color: var(--cor-texto); /* Cor de fundo do círculo */
+  transition: background-color 0.3s ease; /* Transição suave para o fundo */
 }
 
 .prev-btn {
-  left: 0;
+  left: 10px;
 }
 
 .next-btn {
-  right: 0;
-}
-.certificado {
-  flex: 0 0 auto;
-  margin-right: 20px;
-  /* Outros estilos para os certificados */
-}
-
-.scroll-btn {
-  /* Estilos comuns para ambos os botões */
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  color: #333; /* Cor dos ícones */
-  cursor: pointer;
-  z-index: 1;
-  transition: color 0.3s; /* Adiciona uma transição suave de cor */
-}
-
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
+  right: 10px;
 }
 
 .certificado {
-    flex: 0 0 auto; /* Evita que os certificados se estiquem */
-    scroll-snap-align: start; /* Define a posição inicial do scroll */
-    margin-right: 20px; /* Espaçamento entre os certificados */
-    /* Outros estilos para os certificados */
-}
-
-/* Estilizando a barra de rolagem */
-.certificados-carousel::-webkit-scrollbar {
-  width: 8px; /* Largura da barra de rolagem */
-}
-
-/* Estilizando o botão da barra de rolagem */
-.certificados-carousel::-webkit-scrollbar-thumb {
-  background-color: #ffdb58; /* Cor do botão da barra de rolagem */
-  border-radius: 4px; /* Borda arredondada do botão */
-}
-
-/* Estilizando a área de rolagem da barra de rolagem */
-.certificados-carousel::-webkit-scrollbar-track {
-  background-color: #020617; /* Cor da área de rolagem */
+  flex: 0 0 auto; /* Evita que os certificados se estiquem */
+  scroll-snap-align: start; /* Define a posição inicial do scroll */
+  margin-right: 20px; /* Espaçamento entre os certificados */
 }
 
 
 /* Animação da aba de Emails */
-.contato-form {
+.email-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -468,7 +469,7 @@ section {
   font-size: 30px;
 }
 
-.contato-form form {
+.email-form form {
   position: relative;
   width: 600px;
 }
@@ -479,8 +480,8 @@ form textarea {
   padding: 20px;
   border: none;
   outline: none;
-  box-shadow: 0 0 5px var(--segunda-cor-fundo);
-  background: #13131F;
+  box-shadow: 0 0 2px var(--cor-principal);
+  background: var(--outra-cor);
   color: var(--cor-texto);
   margin-bottom: 20px;
   border-radius: 8px;
