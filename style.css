@@ -11,17 +11,30 @@
 
 /* Variáveis */
 :root {
-  --cor-fundo: #0D1117;
-  --cor-texto: #ffffff;
+  --cor-fundo-claro: #ffffff;
+  --cor-fundo-escuro: #0D1117;
   --cor-principal: #ffdb58;
-  --segunda-cor-fundo: #61006a;
   --outra-cor: #1D222B;
+  --cor-texto-escuro: #000000;
+  --cor-texto-claro: #ffffff;
 }
 
 /* Estilo do texto e fundo geral */
 body {
-  color: var(--cor-texto);
-  background: var(--cor-fundo);
+  color: var(--cor-fundo-claro);
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave */
+}
+
+.mode-icon {
+  cursor: pointer; /* Muda o cursor para indicar que é um botão */
+  font-size: 24px; /* Ajusta o tamanho do ícone conforme necessário */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animações suaves para transformações e mudanças de cor */
+}
+
+.mode-icon:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+  color: var(--cor-fundo-claro); /* Altera a cor no hover */
 }
 
 /* Estilo da barra de navegação */
@@ -33,9 +46,18 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 30px 12%;
+  padding: 30px 12%; 
+  background: var(--cor-texto-escuro);
   transition: all 0.50s ease;
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
+/* Estilo dos titulos das seções */
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-texto-escuro);
 }
 
 /* Estilo da imagem de perfil */
@@ -50,16 +72,29 @@ header {
 
 /* Estilo do cabeçalho com logo */
 header.logo {
-  background: var(--cor-fundo);
+  background: var(--cor-fundo-claro);
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
   padding: 16px 16%;
 }
 
+i {
+  display: flex;
+  margin: auto ;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 /* Estilo do logo tipo */
 .logo {
-  font-size: 22px;
-  color: var(--cor-texto);
+  font-size: 25px;
+  color: var(--cor-fundo-claro);
   font-weight: bold;
+  margin-right: 70px;
+  white-space: nowrap;
 }
 
 /* Cor do logo web */
@@ -70,18 +105,25 @@ span {
 /* Barra de pesquisa do meio */
 .menu {
   display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
 }
+
+.menu li {
+  margin-left: 20px; /* Espaçamento entre os links */
+}
+
 
 /* Barra de pesquisa do meio com links */
 .menu a {
   font-size: 1rem;
-  display: flex;
-  justify-content: space-around;
-  color: var(--cor-texto);
+  color: var(--cor-texto-claro);
   font-weight: 500;
-  margin-left: 40px;
-  transition: all 0.50s ease;
+  text-decoration: none;
+  transition: color 0.50s ease;
 }
+
 
 /* Animação da barra de pesquisa do meio com links */
 .menu a:hover {
@@ -91,25 +133,7 @@ span {
 /* Sessão do meio */
 section {
   padding: 180px 12% 90px;
-}
-
-/* Botão lightDark */
-.lightDark {
-  display: inline-block;
-  padding: 5px 10px;
-  background: var(--cor-principal);
-  color: var(--cor-fundo);
-  border: 3px solid var(--cor-principal);
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-left: 100px;
-}
-
-/* Animação do botão lightDark */
-.lightDark:hover {
-  background: var(--cor-principal);
-  color: var(--cor-fundo);
+  background-color: var(--cor-fundo-claro);
 }
 
 /* Apresentação do título do meio */
@@ -127,12 +151,12 @@ section {
 /* Apresentação título e parágrafo */
 .descricao h4 {
   font-size: 1.5rem;
-  color: var(--cor-texto);
+  color: var(--cor-texto-escuro);
 }
 
 .descricao h1 {
   font-size: 4.5rem;
-  color: var(--cor-texto);
+  color: var(--cor-texto-escuro);
   font-weight: 900;
   margin: 20px 0px 20px;
   line-height: 1.2;
@@ -143,7 +167,7 @@ section {
   font-weight: 400;
   width: 620px;
   max-width: 100%;
-  color: var(--cor-texto);
+  color: var(--cor-texto-escuro);
   line-height: 30px;
   margin-bottom: 15px;
 }
@@ -153,8 +177,8 @@ section {
 .meubotao2 {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--cor-principal);
-  color: var(--cor-fundo);
+  background: var(--cor-texto-escuro);
+  color: var(--cor-texto-claro);
   border-radius: 5px;
   font-size: 15px;
   font-weight: 500;
@@ -168,9 +192,9 @@ section {
 /* Animação dos 2 botões */
 .meubotao:hover,
 .meubotao2:hover {
-  background: var(--cor-fundo);
+  background: var(--cor-texto-escuro);
   color: var(--cor-principal);
-  box-shadow: 0 0 6px var(--cor-texto);
+  box-shadow: 0 0 6px var(--cor-fundo-claro);
 }
 
 /* Estilização das redes sociais */
@@ -179,15 +203,14 @@ section {
 }
 
 .social i {
-  background: #0D1117;
+  background: var(--cor-fundo-claro);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: var(--cor-principal);
+  color: var(--cor-texto-escuro);
   border-radius: 100%;
-
   font-size: 25px;
   margin-right: 22px;
   box-shadow: 0 0 20px transparent;
@@ -198,7 +221,7 @@ section {
 /* Animação das redes sociais */
 .social i:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px var(--cor-principal);
+  box-shadow: 0 0 10px var(--cor-texto-escuro);
 }
 
 /* Seção de Habilidades/skill */
@@ -215,7 +238,7 @@ section {
 }
 
 .skill-card {
-  background: var(--outra-cor);
+  background: var(--cor-texto-escuro);
   padding: 10px;
   text-align: center;
   width: 175px;
@@ -230,6 +253,7 @@ section {
 }
 
 .skill-card h3 {
+  color: var(--cor-fundo-claro);
   font-size: 15px;
 }
 
@@ -257,7 +281,7 @@ section {
 }
 
 .projeto-item {
-  background-color: var(--outra-cor);
+  background-color: var(--cor-texto-escuro);
   border-radius: 10px;
   padding: 9px;
   max-width: 100%;
@@ -265,7 +289,7 @@ section {
 }
 
 .projeto-item:hover {
-  outline: 1px solid var(--cor-principal);
+  outline: 1px solid var(--cor-texto-escuro)
 }
 
 .projeto-image {
@@ -283,7 +307,7 @@ section {
 
 .projeto-description {
   font-size: 12px;
-  color: var(--cor-texto);
+  color: var(--cor-texto-claro);
   text-align: center;
 }
 
@@ -296,7 +320,7 @@ section {
 .live-link {
   margin: 0 10px;
   font-size: 18px;
-  color: var(--cor-principal);
+  color: var(--cor-fundo-claro);
   transition: color 0.3s;
 }
 
@@ -308,7 +332,7 @@ section {
 
 .github-link:hover,
 .live-link:hover {
-  color: var(--cor-texto);
+  color: var(--cor-principal);
 }
 
 /* Animação da aba certificados */
@@ -334,18 +358,17 @@ section {
 }
 
 .certificado {
-  background-color: var(--outra-cor);
+  background-color: var(--cor-texto-escuro);
   border-radius: 15px;
   padding: 15px;
   max-width: 400px;
   margin: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificado:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px;
 }
 
 .certificado-image {
@@ -356,6 +379,7 @@ section {
 
 .certificado-title {
   font-size: 24px;
+  color: var(--cor-principal);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -397,13 +421,14 @@ section {
 }
 
 .circle {
+  color: var(--cor-fundo-escuro);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--cor-texto);
+  background-color: var(--cor-fundo-claro);
   transition: background-color 0.3s ease;
 }
 
@@ -446,18 +471,12 @@ form textarea {
   border: none;
   outline: none;
   box-shadow: 0 0 2px var(--cor-principal);
-  background: var(--outra-cor);
-  color: var(--cor-texto);
+  background: var(--cor-texto-escuro);
+  color: var(--cor-fundo-claro);
   margin-bottom: 20px;
   border-radius: 8px;
 }
 
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--cor-principal);
-}
 
 form input::placeholder,
 form textarea::placeholder {
@@ -468,9 +487,9 @@ form textarea::placeholder {
 form .enviarbotao {
   display: inline-block;
   padding: 11px 26px;
-  background: var(--cor-principal);
-  color: var(--cor-fundo);
-  border: 2px solid var(--cor-texto);
+  background: var(--cor-texto-escuro);
+  color: var(--cor-texto-claro);
+  border: 2px solid var(--cor-texto-escuro);
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
@@ -478,15 +497,14 @@ form .enviarbotao {
 }
 
 form .enviarbotao:hover {
-  background: transparent;
   color: var(--cor-principal);
-  box-shadow: 0 0 20px var(--cor-principal);
+  box-shadow: 0 0 20px var(--cor-texto-escuro);
   cursor: pointer;
 }
 
 /* Estilização do Rodapé */
 .footer {
-  
+  background-color: var(--cor-texto-escuro);
   padding: 12px 0;
   display: flex;
   justify-content: center;
@@ -500,8 +518,6 @@ form .enviarbotao:hover {
   align-items: center;
   padding: 0 8%;
 }
-
-
 
 .copyright p {
   font-size: 15px;
@@ -517,8 +533,184 @@ form .enviarbotao:hover {
   background-color: var(--cor-principal);
   width: 40px;
   height: 40px;
-  color: var(--cor-fundo);
+  color: var(--cor-fundo-escuro);
   font-size: 30px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.scroll-inicio:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+  transform: scale(1.1); /* Aumenta o tamanho do botão no hover */
+}
+
+/* Estilos gerais no modo escuro */
+body.dark-mode {
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-principal);
+}
+
+.dark-mode header {
+  background: var(--cor-fundo-escuro);
+}
+
+.dark-mode .perfil-img {
+  border-radius: 10px;
+}
+
+.dark-mode .logo {
+  color: var(--cor-fundo-claro);
+}
+
+.dark-mode span {
+  color: var(--cor-principal);
+}
+
+.dark-mode .menu a {
+  color: var(--cor-fundo-claro);
+}
+
+.dark-mode .menu a:hover {
+  color: var(--cor-principal);
+}
+
+.dark-mode section {
+  background-color: var(--cor-fundo-escuro);
+}
+
+.dark-mode .lightDark {
+  background: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+  border: 3px solid var(--cor-principal);
+}
+
+.dark-mode .lightDark:hover {
+  background: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+}
+
+.dark-mode .descricao h4,
+.dark-mode .descricao h1,
+.dark-mode .descricao p {
+  color: var(--cor-fundo-claro);
+}
+
+.dark-mode .meubotao,
+.dark-mode .meubotao2 {
+  background: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+}
+
+.dark-mode .meubotao:hover,
+.dark-mode .meubotao2:hover {
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-principal);
+}
+
+.dark-mode .social i {
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-principal);
+  box-shadow: 0 0 20px transparent;
+}
+
+.dark-mode .social i:hover {
+  box-shadow: 0 0 10px var(--cor-principal);
+}
+
+.dark-mode .skill-card {
+  background: var(--outra-cor);
+}
+
+.dark-mode .skill-card i {
+  color: var(--cor-principal);
+}
+
+.dark-mode .skill-card:hover {
+  outline: 2px solid var(--cor-principal);
+}
+
+.dark-mode .projeto-item {
+  background-color: var(--outra-cor);
+}
+
+.dark-mode .projeto-item:hover {
+  outline: 1px solid var(--cor-principal);
+}
+
+.dark-mode .projeto-title {
+  color: var(--cor-principal);
+}
+
+.dark-mode .certificado {
+  background-color: var(--outra-cor);
+}
+
+.dark-mode .certificado:hover {
+  box-shadow: 0 8px 16px var(--cor-fundo-escuro);
+}
+
+.dark-mode .certificado-title {
+  color: var(--cor-principal);
+}
+
+.dark-mode .certificado-description {
+  color: var(--cor-fundo-claro);
+}
+
+.dark-mode .scroll-btn:hover .circle {
+  background-color: var(--cor-principal);
+}
+
+.dark-mode .scroll-btn {
+  background: transparent;
+}
+
+.dark-mode .circle {
+  background-color: var(--cor-texto-escuro);
+}
+
+.dark-mode h2 {
+  color: var(--cor-principal);
+}
+
+.dark-mode form input,
+.dark-mode form textarea {
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-principal);
+}
+
+.dark-mode form .enviarbotao {
+  background: var(--cor-principal);
+  color: var(--cor-texto-escuro);
+  border: 2px solid var(--cor-fundo-escuro);
+}
+
+.dark-mode form .enviarbotao:hover {
+  background: transparent;
+  color: var(--cor-principal);
+}
+
+.dark-mode .github-link,
+.dark-mode .live-link {
+  color: var(--cor-principal);
+}
+
+.dark-mode .github-link:hover,
+.dark-mode .live-link:hover {
+  color: var(--cor-texto-escuro);
+}
+
+.dark-mode .scroll-inicio {
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+}
+
+.dark-mode .mode-icon:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+  color: var(--cor-principal); /* Altera a cor no hover */
+}
+
+.dark-mode footer {
+  background-color: var(--cor-fundo-escuro);
 }

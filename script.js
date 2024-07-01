@@ -40,3 +40,22 @@ prevBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
     scrollCertificados(350); // Ajuste a quantidade de rolagem conforme necessário
 });
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modeIcon = document.getElementById('mode_icon');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (prefersDarkScheme) {
+        document.body.classList.add('dark-mode');
+    }
+
+    modeIcon.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            modeIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            modeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+    });
+});
