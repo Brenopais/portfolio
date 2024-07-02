@@ -15,6 +15,7 @@
   --cor-fundo-escuro: #0D1117;
   --cor-principal: #ffdb58;
   --outra-cor: #1D222B;
+  --outra-cor-secundaria:#C81227;
   --cor-texto-escuro: #000000;
   --cor-texto-claro: #ffffff;
 }
@@ -99,7 +100,7 @@ nav {
 
 /* Cor do logo web */
 span {
-  color: var(--cor-principal);
+  color: var(--outra-cor-secundaria);
 }
 
 /* Barra de pesquisa do meio */
@@ -117,7 +118,7 @@ span {
 
 /* Barra de pesquisa do meio com links */
 .menu a {
-  font-size: 1rem;
+  font-size: 15px;
   color: var(--cor-texto-claro);
   font-weight: 500;
   text-decoration: none;
@@ -127,7 +128,7 @@ span {
 
 /* Animação da barra de pesquisa do meio com links */
 .menu a:hover {
-  color: var(--cor-principal);
+  color: var(--outra-cor-secundaria);
 }
 
 /* Sessão do meio */
@@ -150,12 +151,12 @@ section {
 
 /* Apresentação título e parágrafo */
 .descricao h4 {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: var(--cor-texto-escuro);
 }
 
 .descricao h1 {
-  font-size: 4.5rem;
+  font-size: 72px;
   color: var(--cor-texto-escuro);
   font-weight: 900;
   margin: 20px 0px 20px;
@@ -177,7 +178,7 @@ section {
 .meubotao2 {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--cor-texto-escuro);
+  background: var(--outra-cor-secundaria);
   color: var(--cor-texto-claro);
   border-radius: 5px;
   font-size: 15px;
@@ -193,8 +194,8 @@ section {
 .meubotao:hover,
 .meubotao2:hover {
   background: var(--cor-texto-escuro);
-  color: var(--cor-principal);
-  box-shadow: 0 0 6px var(--cor-fundo-claro);
+  color: var(--cor-fundo-claro);
+  box-shadow: 0 0 6px var(--cor-texto-escuro);
 }
 
 /* Estilização das redes sociais */
@@ -212,7 +213,7 @@ section {
   color: var(--cor-texto-escuro);
   border-radius: 100%;
   font-size: 25px;
-  margin-right: 22px;
+  margin-right: 20px;
   box-shadow: 0 0 20px transparent;
   cursor: pointer;
   transition: all 0.50s ease;
@@ -226,7 +227,7 @@ section {
 
 /* Seção de Habilidades/skill */
 .habilidades h2 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .skills-container {
@@ -248,7 +249,7 @@ section {
 
 .skill-card i {
   font-size: 30px;
-  color: var(--cor-principal);
+  color: var(--outra-cor-secundaria);
   margin-bottom: 10px;
 }
 
@@ -258,7 +259,7 @@ section {
 }
 
 .skill-card:hover {
-  outline: 2px solid var(--cor-principal);
+  outline: 2px solid var(--outra-cor-secundaria);
   transform: scale(1.05);
 }
 
@@ -270,7 +271,7 @@ section {
 
 .section-title {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 50px;
 }
 
@@ -299,9 +300,9 @@ section {
 }
 
 .projeto-title {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 12px;
-  color: var(--cor-principal);
+  color: var(--outra-cor-secundaria);
   text-align: center;
 }
 
@@ -332,7 +333,7 @@ section {
 
 .github-link:hover,
 .live-link:hover {
-  color: var(--cor-principal);
+  color: var(--outra-cor-secundaria);
 }
 
 /* Animação da aba certificados */
@@ -347,7 +348,7 @@ section {
 
 .certificados .section-title {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 40px;
 }
 
@@ -378,8 +379,8 @@ section {
 }
 
 .certificado-title {
-  font-size: 24px;
-  color: var(--cor-principal);
+  font-size: 20px;
+  color: var(--outra-cor-secundaria);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -417,11 +418,12 @@ section {
 }
 
 .scroll-btn:hover .circle {
-  background-color: var(--cor-principal);
+  background-color: var(--outra-cor-secundaria);
+  color: var(--cor-texto-escuro);
 }
 
 .circle {
-  color: var(--cor-fundo-escuro);
+  color:var(--cor-texto-escuro);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,7 +458,7 @@ section {
 
 /* Tamanho do texto do título E-mail */
 .conteiner-texto h2 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .email-form form {
@@ -470,7 +472,7 @@ form textarea {
   padding: 20px;
   border: none;
   outline: none;
-  box-shadow: 0 0 2px var(--cor-principal);
+  box-shadow: 0 0 2px var(--outra-cor-secundaria);
   background: var(--cor-texto-escuro);
   color: var(--cor-fundo-claro);
   margin-bottom: 20px;
@@ -480,16 +482,16 @@ form textarea {
 
 form input::placeholder,
 form textarea::placeholder {
-  color: var(--cor-principal);
+  color: var(--cor-fundo-claro);
   font-size: 15px;
 }
 
 form .enviarbotao {
   display: inline-block;
   padding: 11px 26px;
-  background: var(--cor-texto-escuro);
+  background: var(--outra-cor-secundaria);
   color: var(--cor-texto-claro);
-  border: 2px solid var(--cor-texto-escuro);
+  border: 2px solid var(--outra-cor-secundaria);
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
@@ -497,14 +499,15 @@ form .enviarbotao {
 }
 
 form .enviarbotao:hover {
-  color: var(--cor-principal);
+  color: var(--cor-fundo-claro);
+  background-color: var(--cor-texto-escuro);
   box-shadow: 0 0 20px var(--cor-texto-escuro);
   cursor: pointer;
 }
 
 /* Estilização do Rodapé */
 .footer {
-  background-color: var(--cor-texto-escuro);
+  background-color: var(--cor-texto-claro);
   padding: 12px 0;
   display: flex;
   justify-content: center;
@@ -520,9 +523,9 @@ form .enviarbotao:hover {
 }
 
 .copyright p {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--cor-principal);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cor-texto-escuro);
 }
 
 /* Botão de rolar para o início */
@@ -530,22 +533,32 @@ form .enviarbotao:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--cor-principal);
+  background-color: var(--outra-cor-secundaria);
   width: 40px;
   height: 40px;
-  color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-claro);
   font-size: 30px;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.scroll-inicio:hover {
-  background-color: var(--cor-principal);
-  color: var(--cor-fundo-escuro);
-  transform: scale(1.1); /* Aumenta o tamanho do botão no hover */
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-/* Estilos gerais no modo escuro */
+/* Cor da área da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: var(--cor-texto-escuro);
+}
+
+/* Cor e estilo do indicador da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: var(--outra-cor-secundaria);
+  border-radius: 5px;
+}
+
+/* Estilos gerais no Modo Escuro */
 body.dark-mode {
   background-color: var(--cor-fundo-escuro);
   color: var(--cor-principal);
@@ -553,10 +566,6 @@ body.dark-mode {
 
 .dark-mode header {
   background: var(--cor-fundo-escuro);
-}
-
-.dark-mode .perfil-img {
-  border-radius: 10px;
 }
 
 .dark-mode .logo {
@@ -606,12 +615,12 @@ body.dark-mode {
 .dark-mode .meubotao2:hover {
   background: var(--cor-fundo-escuro);
   color: var(--cor-principal);
+  box-shadow: 0 0 6px var(--cor-principal);
 }
 
 .dark-mode .social i {
   background: var(--cor-fundo-escuro);
   color: var(--cor-principal);
-  box-shadow: 0 0 20px transparent;
 }
 
 .dark-mode .social i:hover {
@@ -667,29 +676,14 @@ body.dark-mode {
 }
 
 .dark-mode .circle {
-  background-color: var(--cor-texto-escuro);
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
 }
 
 .dark-mode h2 {
   color: var(--cor-principal);
 }
 
-.dark-mode form input,
-.dark-mode form textarea {
-  background: var(--cor-fundo-escuro);
-  color: var(--cor-principal);
-}
-
-.dark-mode form .enviarbotao {
-  background: var(--cor-principal);
-  color: var(--cor-texto-escuro);
-  border: 2px solid var(--cor-fundo-escuro);
-}
-
-.dark-mode form .enviarbotao:hover {
-  background: transparent;
-  color: var(--cor-principal);
-}
 
 .dark-mode .github-link,
 .dark-mode .live-link {
@@ -701,16 +695,85 @@ body.dark-mode {
   color: var(--cor-texto-escuro);
 }
 
+.dark-mode .scroll-btn:hover .circle {
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-escuro);
+}
+
+
 .dark-mode .scroll-inicio {
   background-color: var(--cor-principal);
   color: var(--cor-fundo-escuro);
 }
 
 .dark-mode .mode-icon:hover {
-  transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
-  color: var(--cor-principal); /* Altera a cor no hover */
+  color: var(--cor-principal); 
 }
 
-.dark-mode footer {
+.dark-mode form .enviarbotao:hover {
+  background: transparent;
+  color: var(--cor-principal);
+}
+
+.dark-mode form input, 
+.dark-mode form textarea {
+  box-shadow: 0 0 2px var(--cor-principal);
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-principal);
+}
+
+.dark-mode form .enviarbotao {
+  background: var(--cor-principal);
+  color: var(--cor-texto-escuro);
+  border: 2px solid var(--cor-principal);
+}
+
+.dark-mode form input::placeholder,
+.dark-mode textarea::placeholder {
+  color: var(--cor-principal);
+}
+
+.dark-mode form .enviarbotao:hover {
+  color: var(--cor-principal);
+  box-shadow: 0 0 20px var(--cor-principal);
+}
+
+
+.dark-mode .copyright p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--cor-principal);
+}
+
+
+.dark-mode .scroll-inicio {
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+  transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+}
+
+.dark-mode .scroll-inicio:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo-escuro);
+  transform: scale(1.1);
+}
+
+.dark-mode .footer {
   background-color: var(--cor-fundo-escuro);
+}
+
+/* Estilos para a barra de rolagem */
+.dark-mode::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Cor da área da barra de rolagem */
+.dark-mode::-webkit-scrollbar-track {
+  background: var(--outra-cor);
+}
+
+/* Cor e estilo do indicador da barra de rolagem */
+.dark-mode::-webkit-scrollbar-thumb {
+  background-color: var(--cor-principal);
+  border-radius: 5px;
 }

@@ -27,22 +27,30 @@ const scrollCertificados = (offset) => {
     });
 };
 
-// Seleciona os elementos relevantes
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const certificadosWrapper = document.querySelector('.certificados-wrapper');
-
-// Adiciona ouvintes de evento aos botões
-prevBtn.addEventListener('click', () => {
-    scrollCertificados(-350); // Ajuste a quantidade de rolagem conforme necessário
-});
-
-nextBtn.addEventListener('click', () => {
-    scrollCertificados(350); // Ajuste a quantidade de rolagem conforme necessário
-});
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
+    // Função para rolar os certificados
+    const scrollCertificados = (offset) => {
+        certificadosWrapper.scrollBy({
+            left: offset,
+            behavior: 'smooth'
+        });
+    };
+
+    // Seleciona os elementos relevantes
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const certificadosWrapper = document.querySelector('.certificados-wrapper');
+
+    // Adiciona ouvintes de evento aos botões
+    prevBtn.addEventListener('click', () => {
+        scrollCertificados(-350); // Ajuste a quantidade de rolagem conforme necessário
+    });
+
+    nextBtn.addEventListener('click', () => {
+        scrollCertificados(350); // Ajuste a quantidade de rolagem conforme necessário
+    });
+
+    // Modo escuro
     const modeIcon = document.getElementById('mode_icon');
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -58,4 +66,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modeIcon.classList.replace('fa-sun', 'fa-moon');
         }
     });
+
+    // Efeito de digitação suave
+    var app = document.getElementById('typewriter');
+    var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 100, // Aumente o delay para tornar a digitação mais suave
+    });
+
+    function hideText() {
+        app.style.opacity = 0; // Animação de desaparecimento suave
+        setTimeout(() => {
+            app.style.opacity = 1; // Restaura a opacidade
+            typewriter.start(); // Reinicia a digitação
+        }, 1000); // Pausa de 1.2 segundos antes de recomeçar
+    }
+
+    typewriter
+        .typeString('Breno Pais')
+        .pauseFor(3000) // Pausa depois de digitar o texto completo
+        .callFunction(hideText) // Chamada da função para ocultar o texto
+        .start(); // Inicia o efeito de digitação
 });
