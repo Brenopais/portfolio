@@ -26,7 +26,6 @@ body {
   font-size: 20px;
   transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave */
 }
-
 .mode-icon {
   cursor: pointer; /* Muda o cursor para indicar que é um botão */
   font-size: 24px; /* Ajusta o tamanho do ícone conforme necessário */
@@ -103,6 +102,7 @@ span {
   color: var(--outra-cor-secundaria);
 }
 
+
 /* Barra de pesquisa do meio */
 .menu {
   display: flex;
@@ -137,6 +137,7 @@ section {
   background-color: var(--cor-fundo-claro);
 }
 
+
 /* Apresentação do título do meio */
 .sobre {
   height: 100vh;
@@ -165,7 +166,7 @@ section {
 
 .descricao p {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   width: 620px;
   max-width: 100%;
   color: var(--cor-texto-escuro);
@@ -235,16 +236,15 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.4rem;
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .skill-card {
   background: var(--cor-texto-escuro);
   padding: 10px;
   text-align: center;
-  width: 175px;
+  width: 204px;
   box-sizing: border-box;
-  transition: transform 0.3s ease, outline 0.3s ease;
 }
 
 .skill-card i {
@@ -264,27 +264,23 @@ section {
 }
 
 /* Seção de Projetos */
-
-.container {
-  padding: 4rem;
-}
-
 .section-title {
   text-align: center;
   font-size: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-top: calc(10vh - 120px); 
 }
 
 .projeto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
+  justify-content: center; /* Centraliza os itens horizontalmente */
 }
-
 .projeto-item {
   background-color: var(--cor-texto-escuro);
   border-radius: 10px;
-  padding: 9px;
+  padding: 10px;
   max-width: 100%;
   margin: auto;
 }
@@ -338,18 +334,17 @@ section {
 
 /* Animação da aba certificados */
 .certificados {
-  padding: 80px 0;
+  cursor: pointer;
 }
 
 .certificados .container {
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .certificados .section-title {
   text-align: center;
   font-size: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .certificados-grid {
@@ -361,21 +356,18 @@ section {
 .certificado {
   background-color: var(--cor-texto-escuro);
   border-radius: 15px;
-  padding: 15px;
-  max-width: 400px;
+  width: 380px;
   margin: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificado:hover {
-  transform: scale(1.05);
   box-shadow: 0 8px 16px;
 }
 
 .certificado-image {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .certificado-title {
@@ -399,10 +391,27 @@ section {
 
 .certificados-wrapper {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
   transition: transform 0.2s ease-in-out;
-  padding-bottom: 20px;
+  align-items: center;
+  padding-bottom: 5px; /* Espaço extra para evitar a barra de rolagem */
+  margin-bottom: -15px; /* Compensa o padding negativo */
+}
+
+.certificado {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 25px;
+  margin-bottom: 15px; /* Espaçamento entre os certificados */
+}
+
+.certificado:last-child {
+  margin-right: 0;
+}
+
+.certificados-wrapper::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem do navegador */
 }
 
 .scroll-btn {
@@ -442,28 +451,23 @@ section {
   right: 10px;
 }
 
-.certificado {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  margin-right: 20px;
-}
-
 /* Animação da aba de Emails */
 .email-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2.2rem;
 }
 
 /* Tamanho do texto do título E-mail */
 .conteiner-texto h2 {
   font-size: 40px;
+  margin-bottom: 35px;
 }
 
 .email-form form {
   position: relative;
-  width: 600px;
+  width: 100%; /* Ajustei para ocupar a largura máxima disponível */
+  max-width: 600px; /* Limita a largura do formulário a 600px */
 }
 
 form input,
@@ -472,13 +476,13 @@ form textarea {
   padding: 20px;
   border: none;
   outline: none;
-  box-shadow: 0 0 2px var(--outra-cor-secundaria);
+  box-shadow: 0 0 2px var(--cor-fundo-claro);
   background: var(--cor-texto-escuro);
   color: var(--cor-fundo-claro);
   margin-bottom: 20px;
   border-radius: 8px;
+  font-size: 15px;
 }
-
 
 form input::placeholder,
 form textarea::placeholder {
@@ -491,11 +495,11 @@ form .enviarbotao {
   padding: 11px 26px;
   background: var(--outra-cor-secundaria);
   color: var(--cor-texto-claro);
-  border: 2px solid var(--outra-cor-secundaria);
+  border: 1px solid var(--cor-fundo-claro);
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
-  transition: all .50s ease;
+  transition: all .5s ease;
 }
 
 form .enviarbotao:hover {
@@ -504,6 +508,7 @@ form .enviarbotao:hover {
   box-shadow: 0 0 20px var(--cor-texto-escuro);
   cursor: pointer;
 }
+
 
 /* Estilização do Rodapé */
 .footer {
@@ -514,7 +519,6 @@ form .enviarbotao:hover {
 }
 
 .footer-container {
-  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -524,22 +528,34 @@ form .enviarbotao:hover {
 
 .copyright p {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 15px;
   color: var(--cor-texto-escuro);
 }
 
 /* Botão de rolar para o início */
 .scroll-inicio {
-  display: inline-flex;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--outra-cor-secundaria);
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   color: var(--cor-texto-claro);
   font-size: 30px;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-inicio:hover {
+  background-color: var(--outra-cor-secundaria);
+  color: var(--cor-fundo-claro);
+  transform: scale(1.1);
 }
 
 /* Estilos para a barra de rolagem */
@@ -555,7 +571,7 @@ form .enviarbotao:hover {
 /* Cor e estilo do indicador da barra de rolagem */
 ::-webkit-scrollbar-thumb {
   background-color: var(--outra-cor-secundaria);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Estilos gerais no Modo Escuro */
@@ -700,10 +716,15 @@ body.dark-mode {
   color: var(--cor-texto-escuro);
 }
 
-
-.dark-mode .scroll-inicio {
+.dark-mode .scroll-inicio:hover {
   background-color: var(--cor-principal);
   color: var(--cor-fundo-escuro);
+  transform: scale(1.1);
+}
+
+.dark-mode .scroll-inicio {
+  background-color: var(--outra-cor-secundaria);
+  color: var(--cor-texto-claro);
 }
 
 .dark-mode .mode-icon:hover {
@@ -740,8 +761,6 @@ body.dark-mode {
 
 
 .dark-mode .copyright p {
-  font-size: 15px;
-  font-weight: 400;
   color: var(--cor-principal);
 }
 
@@ -775,5 +794,4 @@ body.dark-mode {
 /* Cor e estilo do indicador da barra de rolagem */
 .dark-mode::-webkit-scrollbar-thumb {
   background-color: var(--cor-principal);
-  border-radius: 5px;
 }

@@ -19,15 +19,15 @@ window.addEventListener("scroll", () => {
     }, 100); // Tempo de debounce em ms
 });
 
-// Função para rolar os certificados
-const scrollCertificados = (offset) => {
-    certificadosWrapper.scrollBy({
-        left: offset,
-        behavior: 'smooth'
-    });
-};
-
 document.addEventListener('DOMContentLoaded', (event) => {
+    // Seleciona os elementos relevantes
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const certificadosWrapper = document.querySelector('.certificados-wrapper');
+    const modeIcon = document.getElementById('mode_icon');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const app = document.getElementById('typewriter');
+
     // Função para rolar os certificados
     const scrollCertificados = (offset) => {
         certificadosWrapper.scrollBy({
@@ -35,11 +35,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             behavior: 'smooth'
         });
     };
-
-    // Seleciona os elementos relevantes
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const certificadosWrapper = document.querySelector('.certificados-wrapper');
 
     // Adiciona ouvintes de evento aos botões
     prevBtn.addEventListener('click', () => {
@@ -50,14 +45,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         scrollCertificados(350); // Ajuste a quantidade de rolagem conforme necessário
     });
 
-    // Modo escuro
-    const modeIcon = document.getElementById('mode_icon');
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
+    // Configuração inicial do modo escuro
     if (prefersDarkScheme) {
         document.body.classList.add('dark-mode');
+        modeIcon.classList.replace('fa-moon', 'fa-sun');
     }
 
+    // Alternância de modo escuro
     modeIcon.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         if (document.body.classList.contains('dark-mode')) {
@@ -68,8 +62,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Efeito de digitação suave
-    var app = document.getElementById('typewriter');
-    var typewriter = new Typewriter(app, {
+    const typewriter = new Typewriter(app, {
         loop: true,
         delay: 100, // Aumente o delay para tornar a digitação mais suave
     });
@@ -79,7 +72,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(() => {
             app.style.opacity = 1; // Restaura a opacidade
             typewriter.start(); // Reinicia a digitação
-        }, 1000); // Pausa de 1.2 segundos antes de recomeçar
+        }, 1000); // Pausa de 1 segundo antes de recomeçar
     }
 
     typewriter
