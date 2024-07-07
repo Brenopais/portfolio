@@ -24,17 +24,17 @@
 body {
   color: var(--cor-fundo-claro);
   font-size: 20px;
-  transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave */
+  transition: background-color 0.3s, color 0.3s; 
 }
 .mode-icon {
-  cursor: pointer; /* Muda o cursor para indicar que é um botão */
-  font-size: 24px; /* Ajusta o tamanho do ícone conforme necessário */
-  transition: transform 0.3s ease, color 0.3s ease; /* Animações suaves para transformações e mudanças de cor */
+  cursor: pointer; 
+  font-size: 24px; 
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .mode-icon:hover {
-  transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
-  color: var(--cor-fundo-claro); /* Altera a cor no hover */
+  transform: scale(1.2); 
+  color: var(--cor-fundo-claro);
 }
 
 /* Estilo da barra de navegação */
@@ -49,7 +49,7 @@ header {
   padding: 30px 12%; 
   background: var(--cor-texto-escuro);
   transition: all 0.50s ease;
-  justify-content: space-between; /* Distribui o espaço entre os itens */
+  justify-content: space-between; 
 }
 
 /* Estilo dos titulos das seções */
@@ -112,7 +112,7 @@ span {
 }
 
 .menu li {
-  margin-left: 20px; /* Espaçamento entre os links */
+  margin-left: 20px;
 }
 
 
@@ -275,7 +275,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  justify-content: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; 
 }
 .projeto-item {
   background-color: var(--cor-texto-escuro);
@@ -381,13 +381,13 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Para um estilo mais arredondado */
+  border-radius: 50%; 
 }
 
 .prev-button i, 
 .next-button i {
   font-size: 40px;
-  color: var(--cor-fundo-claro) /* Cor do ícone */
+  color: var(--cor-fundo-claro) 
 }
 
 
@@ -406,8 +406,8 @@ section {
 
 .email-form form {
   position: relative;
-  width: 100%; /* Ajustei para ocupar a largura máxima disponível */
-  max-width: 600px; /* Limita a largura do formulário a 600px */
+  width: 100%; 
+  max-width: 600px; 
 }
 
 form input,
@@ -614,7 +614,7 @@ body.dark-mode {
 
 .dark-mode .prev-button i,
 .dark-mode .next-button i {
-  color: var(--cor-texto-escuro); /* Cor do ícone */
+  color: var(--cor-texto-escuro); 
 }
 
 
@@ -699,7 +699,7 @@ body.dark-mode {
 .dark-mode .scroll-inicio {
   background-color: var(--cor-principal);
   color: var(--cor-fundo-escuro);
-  transform: scale(1.2); /* Aumenta o tamanho do ícone no hover */
+  transform: scale(1.2);
 }
 
 .dark-mode .scroll-inicio:hover {
