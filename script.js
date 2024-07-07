@@ -1,49 +1,61 @@
-// Debounce para evento de scroll
-let debounceScroll;
-const header = document.querySelector("header");
-let lastScrollTop = 0;
-
-window.addEventListener("scroll", () => {
-    if (debounceScroll) clearTimeout(debounceScroll);
-    
-    debounceScroll = setTimeout(() => {
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        if (currentScroll > lastScrollTop) {
-            // Descendo
-            header.style.top = "-100px"; // Oculta a barra de navegação
-        } else {
-            // Subindo
-            header.style.top = "0"; // Mostra a barra de navegação
-        }
-        lastScrollTop = currentScroll;
-    }, 100); // Tempo de debounce em ms
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Seleciona os elementos relevantes
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+document.addEventListener('DOMContentLoaded', () => {
+    // Elementos DOM
+    const header = document.querySelector("header");
     const certificadosWrapper = document.querySelector('.certificados-wrapper');
     const modeIcon = document.getElementById('mode_icon');
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const app = document.getElementById('typewriter');
+    const slider = document.querySelectorAll('.slider');
+    const btnPrev = document.querySelector('.prev-button');
+    const btnNext = document.querySelector('.next-button');
 
-    // Função para rolar os certificados
-    const scrollCertificados = (offset) => {
-        certificadosWrapper.scrollBy({
-            left: offset,
-            behavior: 'smooth'
-        });
-    };
+    // Variáveis e Estado
+    let debounceScroll;
+    let lastScrollTop = 0;
+    let currentSlide = 0;
 
-    // Adiciona ouvintes de evento aos botões
-    prevBtn.addEventListener('click', () => {
-        scrollCertificados(-350); // Ajuste a quantidade de rolagem conforme necessário
+    // Verifica o esquema de cores preferido
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // Event Listener para scroll com debounce
+    window.addEventListener("scroll", () => {
+        if (debounceScroll) clearTimeout(debounceScroll);
+        
+        debounceScroll = setTimeout(() => {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                // Descendo
+                header.style.top = "-100px"; // Oculta a barra de navegação
+            } else {
+                // Subindo
+                header.style.top = "0"; // Mostra a barra de navegação
+            }
+            lastScrollTop = currentScroll;
+        }, 100); // Tempo de debounce em ms
     });
 
-    nextBtn.addEventListener('click', () => {
-        scrollCertificados(350); // Ajuste a quantidade de rolagem conforme necessário
-    });
+    // Funções para manipulação de slider
+    function hideSlider() {
+        slider.forEach(item => item.classList.remove('on'));
+    }
+
+    function showSlider() {
+        slider[currentSlide].classList.add('on');
+    }
+
+    function nextSlider() {
+        hideSlider();
+        currentSlide = (currentSlide === slider.length - 1) ? 0 : currentSlide + 1;
+        showSlider();
+    }
+
+    function prevSlider() {
+        hideSlider();
+        currentSlide = (currentSlide === 0) ? slider.length - 1 : currentSlide - 1;
+        showSlider();
+    }
+
+    btnNext.addEventListener('click', nextSlider);
+    btnPrev.addEventListener('click', prevSlider);
 
     // Configuração inicial do modo escuro
     if (prefersDarkScheme) {
@@ -54,30 +66,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Alternância de modo escuro
     modeIcon.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-            modeIcon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-            modeIcon.classList.replace('fa-sun', 'fa-moon');
-        }
+        modeIcon.classList.toggle('fa-moon');
+        modeIcon.classList.toggle('fa-sun');
     });
 
     // Efeito de digitação suave
     const typewriter = new Typewriter(app, {
         loop: true,
-        delay: 100, // Aumente o delay para tornar a digitação mais suave
+        delay: 100,
     });
 
     function hideText() {
-        app.style.opacity = 0; // Animação de desaparecimento suave
+        app.style.opacity = 0;
         setTimeout(() => {
-            app.style.opacity = 1; // Restaura a opacidade
-            typewriter.start(); // Reinicia a digitação
-        }, 1000); // Pausa de 1 segundo antes de recomeçar
+            app.style.opacity = 1;
+            typewriter.start();
+        }, 1000);
     }
 
     typewriter
         .typeString('Breno Pais')
-        .pauseFor(3000) // Pausa depois de digitar o texto completo
-        .callFunction(hideText) // Chamada da função para ocultar o texto
-        .start(); // Inicia o efeito de digitação
+        .pauseFor(3000)
+        .callFunction(hideText)
+        .start();
 });

@@ -341,115 +341,55 @@ section {
   margin: 0 auto;
 }
 
-.certificados .section-title {
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 35px;
+
+.container-slider {
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.certificados-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
+.container-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
 }
 
-.certificado {
-  background-color: var(--cor-texto-escuro);
-  border-radius: 15px;
-  width: 380px;
-  margin: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certificado:hover {
-  box-shadow: 0 8px 16px;
-}
-
-.certificado-image {
+.slider {
+  opacity: 0;
+  transition: opacity .2s;
+  position: absolute;
   width: 100%;
   border-radius: 10px;
 }
 
-.certificado-title {
-  font-size: 20px;
-  color: var(--outra-cor-secundaria);
-  margin-bottom: 10px;
-  text-align: center;
+.on {
+  opacity: 1;
 }
 
-.certificado-description {
-  font-size: 16px;
-  text-align: center;
-}
-
-.certificados-carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.certificados-wrapper {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  transition: transform 0.2s ease-in-out;
-  align-items: center;
-  padding-bottom: 5px; /* Espaço extra para evitar a barra de rolagem */
-  margin-bottom: -15px; /* Compensa o padding negativo */
-}
-
-.certificado {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  margin-right: 25px;
-  margin-bottom: 15px; /* Espaçamento entre os certificados */
-}
-
-.certificado:last-child {
-  margin-right: 0;
-}
-
-.certificados-wrapper::-webkit-scrollbar {
-  display: none; /* Oculta a barra de rolagem do navegador */
-}
-
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
+.prev-button, .next-button {
+  width: 45px;
+  height: 45px;
   border: none;
-  font-size: 24px;
+  background-color: transparent;
   cursor: pointer;
-  z-index: 20;
-  transition: background-color 0.3s ease;
-}
-
-.scroll-btn:hover .circle {
   background-color: var(--outra-cor-secundaria);
-  color: var(--cor-texto-escuro);
-}
-
-.circle {
-  color:var(--cor-texto-escuro);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--cor-fundo-claro);
-  transition: background-color 0.3s ease;
+  border-radius: 50%; /* Para um estilo mais arredondado */
 }
 
-.prev-btn {
-  left: 10px;
+.prev-button i, 
+.next-button i {
+  font-size: 40px;
+  color: var(--cor-fundo-claro) /* Cor do ícone */
 }
 
-.next-btn {
-  right: 10px;
-}
 
 /* Animação da aba de Emails */
 .email-form {
@@ -667,25 +607,16 @@ body.dark-mode {
   color: var(--cor-principal);
 }
 
-.dark-mode .certificado {
-  background-color: var(--outra-cor);
-}
 
-.dark-mode .certificado:hover {
-  box-shadow: 0 8px 16px var(--cor-fundo-escuro);
-}
-
-.dark-mode .certificado-title {
-  color: var(--cor-principal);
-}
-
-.dark-mode .certificado-description {
-  color: var(--cor-fundo-claro);
-}
-
-.dark-mode .scroll-btn:hover .circle {
+.dark-mode .prev-button, .dark-mode .next-button {
   background-color: var(--cor-principal);
 }
+
+.dark-mode .prev-button i,
+.dark-mode .next-button i {
+  color: var(--cor-texto-escuro); /* Cor do ícone */
+}
+
 
 .dark-mode .scroll-btn {
   background: transparent;
@@ -728,7 +659,7 @@ body.dark-mode {
 }
 
 .dark-mode .mode-icon:hover {
-  color: var(--cor-principal); 
+  color: var(--cor-principal);
 }
 
 .dark-mode form .enviarbotao:hover {
