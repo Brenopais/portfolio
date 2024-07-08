@@ -413,15 +413,16 @@ section {
 form input,
 form textarea {
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   border: none;
   outline: none;
   box-shadow: 0 0 2px var(--cor-fundo-claro);
   background: var(--cor-texto-escuro);
   color: var(--cor-fundo-claro);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 8px;
   font-size: 15px;
+  font-weight: 500;
 }
 
 form input::placeholder,
@@ -670,8 +671,8 @@ body.dark-mode {
 .dark-mode form input, 
 .dark-mode form textarea {
   box-shadow: 0 0 2px var(--cor-principal);
-  background: var(--cor-fundo-escuro);
-  color: var(--cor-principal);
+  background: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
 }
 
 .dark-mode form .enviarbotao {
@@ -682,7 +683,7 @@ body.dark-mode {
 
 .dark-mode form input::placeholder,
 .dark-mode textarea::placeholder {
-  color: var(--cor-principal);
+  color: var(--cor-texto-escuro);
 }
 
 .dark-mode form .enviarbotao:hover {
