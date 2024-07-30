@@ -17,23 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verifica o esquema de cores preferido
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    // Event Listener para scroll com debounce
-    window.addEventListener("scroll", () => {
-        if (debounceScroll) clearTimeout(debounceScroll);
-
-        debounceScroll = setTimeout(() => {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            if (currentScroll > lastScrollTop) {
-                // Descendo
-                header.style.top = "-100px"; // Oculta a barra de navegação
-            } else {
-                // Subindo
-                header.style.top = "0"; // Mostra a barra de navegação
-            }
-            lastScrollTop = currentScroll;
-        }, 100); // Tempo de debounce em ms
-    });
-
+    
     // Funções para manipulação de slider
     function hideSlider() {
         slider.forEach(item => item.classList.remove('on'));
@@ -98,10 +82,32 @@ document.addEventListener('DOMContentLoaded', () => {
         emailjs.sendForm('service_137vb77', 'template_dsonzlg', contactForm)
             .then(function() {
                 console.log('Email enviado com sucesso!');
-                // Adicione qualquer ação que deseja executar após o envio bem-sucedido
+                
+                contactForm.reset();
+                // Exibe uma mensagem de confirmação ou feedback visual
+                const successMessage = document.createElement('p');
+                successMessage.textContent = 'Mensagem enviada com sucesso!';
+                successMessage.style.color = 'green';
+                contactForm.appendChild(successMessage);
+
+                // Remove a mensagem após alguns segundos (opcional)
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+
             }, function(error) {
                 console.error('Erro ao enviar o email:', error);
-                // Adicione qualquer ação que deseja executar em caso de erro
+                
+                // Exibe uma mensagem de erro
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.';
+                errorMessage.style.color = 'red';
+                contactForm.appendChild(errorMessage);
+
+                // Remove a mensagem após alguns segundos (opcional)
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 5000);
             });
     });
 });

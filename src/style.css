@@ -37,6 +37,16 @@ body {
   color: var(--cor-fundo-claro);
 }
 
+/* Imagem de perfil padrão (modo claro) */
+.perfil-img {
+  content: url('img/vermelho.png');
+}
+
+/* Imagem de perfil no modo escuro */
+.dark-mode .perfil-img {
+  content: url('img/amarelo.png');
+}
+
 /* Estilo da barra de navegação */
 header {
   position: fixed;
