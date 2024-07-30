@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelectorAll('.slider');
     const btnPrev = document.querySelector('.prev-button');
     const btnNext = document.querySelector('.next-button');
+    const contactForm = document.getElementById('contact-form');
 
     // Variáveis e Estado
     let debounceScroll;
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listener para scroll com debounce
     window.addEventListener("scroll", () => {
         if (debounceScroll) clearTimeout(debounceScroll);
-        
+
         debounceScroll = setTimeout(() => {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             if (currentScroll > lastScrollTop) {
@@ -89,4 +90,18 @@ document.addEventListener('DOMContentLoaded', () => {
         .pauseFor(3000)
         .callFunction(hideText)
         .start();
+
+    // Envio de formulário
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.init('BBb0C8GYZ9Q-SlelO');
+        emailjs.sendForm('service_137vb77', 'template_dsonzlg', contactForm)
+            .then(function() {
+                console.log('Email enviado com sucesso!');
+                // Adicione qualquer ação que deseja executar após o envio bem-sucedido
+            }, function(error) {
+                console.error('Erro ao enviar o email:', error);
+                // Adicione qualquer ação que deseja executar em caso de erro
+            });
+    });
 });

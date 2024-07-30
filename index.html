@@ -133,40 +133,42 @@
             </div>
         </section>
 
-        <!-- Certificados -->
-<section class="certificados" id="certificados">
-    <h2 class="section-title">CERTIFICADOS.</h2>
-    <div class="container-slider">
-        <!-- Botão para retroceder -->
-        <button class="prev-button"><i class='bx bx-chevron-left'></i></button>
-        <!-- Container das imagens do slider -->
-        <div class="container-images">
-            <!-- Imagem principal, inicialmente visível -->
-            <img src="img/port-6.jpg" alt="girl" class="slider on">
-            <!-- Outra imagem do slider, inicialmente oculta -->
-            <img src="img/port-7.jpg" alt="girl" class="slider">
+            <!-- Certificados -->
+    <section class="certificados" id="certificados">
+        <h2 class="section-title">CERTIFICADOS.</h2>
+        <div class="container-slider">
+            <!-- Botão para retroceder -->
+            <button class="prev-button"><i class='bx bx-chevron-left'></i></button>
+            <!-- Container das imagens do slider -->
+            <div class="container-images">
+                <!-- Imagem principal, inicialmente visível -->
+                <img src="img/port-6.jpg" alt="girl" class="slider on">
+                <!-- Outra imagem do slider, inicialmente oculta -->
+                <img src="img/port-7.jpg" alt="girl" class="slider">
+            </div>
+            <!-- Botão para avançar -->
+            <button class="next-button"><i class='bx bx-chevron-right'></i></button>
         </div>
-        <!-- Botão para avançar -->
-        <button class="next-button"><i class='bx bx-chevron-right'></i></button>
-    </div>
-</section>
+    </section>
         
 
+    <main>
         <!-- Contato -->
         <section class="email" id="contato">
             <div class="conteiner-texto">
                 <h2>ENTRE EM CONTATO.</h2>
             </div>
             <div class="email-form">
-                <form action="">
-                    <input type="text" placeholder="Digite seu nome" required>
-                    <input type="email" placeholder="Digite o endereço de email.." required>
-                    <textarea name="" id="" cols="30" rows="7" placeholder="Digite uma mensagem.." required></textarea>
-                    <input type="submit" name="" value="Enviar Mensagem" class="enviarbotao">
+                <form id="contact-form">
+                    <input type="text" name="from_name" placeholder="Digite seu nome" autocomplete="off" required >
+                    <input type="email" name="email" placeholder="Digite o endereço de email.." autocomplete="off" required >
+                    <textarea name="mensagem" cols="30" rows="7" placeholder="Digite uma mensagem.." required></textarea>
+                    <input type="submit"  class="enviarbotao">
                 </form>
             </div>
         </section>
     </main>
+    
 
     <!-- Rodapé -->
     <div class="footer">
@@ -180,7 +182,8 @@
         </div>
     </div>
     <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

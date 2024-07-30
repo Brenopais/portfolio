@@ -20,6 +20,7 @@ Você pode acessar o meu portfólio online [aqui](https://seu-site.com).
 - HTML5 (Estrutura básica e semântica do documento.)
 - CSS3 (Estilização para criar um layout atraente.)
 - JavaScript (para funcionalidades interativas como scroll, sliders, dark mode toggle, efeitos etc)
+- Node.js: Utilizado para gerenciar pacotes e executar scripts (se aplicável).
 
 ## Contribuição
 Contribuições são bem-vindas! Se você encontrou algum problema, tem sugestões ou melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
