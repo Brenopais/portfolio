@@ -277,52 +277,73 @@ section {
 .section-title {
   text-align: center;
   font-size: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: calc(10vh - 120px); 
 }
 
 .projeto-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  justify-content: center; 
+  justify-content: center;
 }
+
 .projeto-item {
   background-color: var(--cor-texto-escuro);
   border-radius: 10px;
   padding: 10px;
-  max-width: 100%;
-  margin: auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%; /* Ocupa 100% do espaço disponível na coluna */
+  height: 100%; /* Garante que todas as caixas tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projeto-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .projeto-item:hover {
-  outline: 1px solid var(--cor-texto-escuro)
+  outline: 1px solid var(--outra-cor-secundaria);
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
 }
 
 .projeto-image {
   width: 100%;
-  border-radius: 5px;
-  margin-bottom: 5px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px; /* Aumentado o espaço abaixo da imagem */
+}
+
+.project-links a {
+  margin: 0 10px; /* Espaçamento horizontal entre os ícones */
+  font-size: 1.5em; /* Tamanho dos ícones */
 }
 
 .projeto-title {
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 22px;
+  margin-bottom: 10px;
   color: var(--outra-cor-secundaria);
   text-align: center;
 }
 
 .projeto-description {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--cor-texto-claro);
-  text-align: center;
+  text-align: center; 
+  margin: 0 auto 0px auto;
+  line-height: 1.6;
 }
 
 .project-links {
   display: flex;
   justify-content: center;
+  margin-top: auto; 
 }
-
 .github-link,
 .live-link {
   margin: 0 10px;
@@ -351,7 +372,6 @@ section {
   margin: 0 auto;
 }
 
-
 .container-slider {
   display: flex;
   width: 100%;
@@ -375,10 +395,12 @@ section {
   position: absolute;
   width: 100%;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .on {
   opacity: 1;
+  z-index: 2;
 }
 
 .prev-button, .next-button {
@@ -399,6 +421,14 @@ section {
   font-size: 40px;
   color: var(--cor-fundo-claro) 
 }
+
+/* Animação da aba de Emails */
+.email-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 /* Animação da aba de Emails */

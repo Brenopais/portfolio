@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verifica o esquema de cores preferido
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    
     // Funções para manipulação de slider
     function hideSlider() {
         slider.forEach(item => item.classList.remove('on'));
@@ -109,5 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     errorMessage.remove();
                 }, 5000);
             });
+    });
+
+    // Adiciona o evento de clique para redirecionar ao URL armazenado
+    slider.forEach(image => {
+        image.addEventListener('click', () => {
+            const url = image.getAttribute('data-url');
+            console.log(`Abrindo URL: ${url}`); // Adicione esta linha para depurar
+            if (url) {
+                window.open(url, '_blank'); // Abre o URL em uma nova aba
+            }
+        });
     });
 });
