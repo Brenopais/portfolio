@@ -6,7 +6,7 @@ Este é o repositório do meu portfólio pessoal como desenvolvedor web. Ele inc
 
 ## Demonstração
 
-Você pode acessar o meu portfólio online [aqui](https://seu-site.com).
+Você pode acessar o meu portfólio online [aqui](https://brenopais.github.io/portfolio/).
 
 ## Conteúdo
 
