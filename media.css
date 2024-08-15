@@ -1,0 +1,110 @@
+/* Dispositivos grandes (desktops) */
+@media (min-width: 1024px) {
+  .projeto-grid {
+    grid-template-columns: repeat(3, 1fr); /* Três colunas para grandes telas */
+  }
+}
+
+/* Dispositivos médios (tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  header {
+    padding: 20px 8%; /* Reduzir o padding no header */
+  }
+
+  .descricao h1 {
+    font-size: 60px; /* Reduzir o tamanho da fonte dos títulos */
+  }
+
+  .descricao p {
+    width: 90%; /* Ajustar a largura do parágrafo */
+    line-height: 28px; /* Ajustar o espaçamento das linhas */
+  }
+
+  .projeto-grid {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em tablets */
+  }
+}
+
+/* Dispositivos pequenos (celulares) */
+@media (max-width: 767px) {
+  header {
+    padding: 15px 5%; /* Reduzir ainda mais o padding no header */
+  }
+
+  .logo {
+    font-size: 22px; /* Diminuir o tamanho da fonte do logo */
+  }
+
+  .menu {
+    display: none; /* Esconder o menu no header em dispositivos pequenos */
+  }
+
+  .descricao h1 {
+    font-size: 48px; /* Reduzir o tamanho da fonte dos títulos */
+  }
+
+  .descricao p {
+    width: 100%; /* Parágrafo ocupar toda a largura da tela */
+    line-height: 26px; /* Ajustar o espaçamento das linhas */
+  }
+
+  .meubotao,
+  .meubotao2 {
+    padding: 8px 16px; /* Ajustar o padding dos botões */
+  }
+
+  .projeto-grid {
+    grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+    gap: 10px; /* Ajustar o espaçamento entre os projetos */
+  }
+
+  .skill-card {
+    width: 100%; /* Ajustar largura das skills para ocupar 100% */
+  }
+
+  .container-slider {
+    width: 90%; /* Ajustar a largura do container do slider */
+  }
+
+  .prev-button, .next-button {
+    width: 35px; /* Ajustar o tamanho dos botões do slider */
+    height: 35px;
+    font-size: 30px;
+  }
+
+  .scroll-inicio {
+    width: 40px; /* Ajustar o tamanho do botão de scroll para cima */
+    height: 40px;
+    font-size: 25px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Dispositivos extra pequenos (celulares menores) */
+@media (max-width: 480px) {
+  .descricao h1 {
+    font-size: 36px; /* Reduzir o tamanho da fonte dos títulos ainda mais */
+  }
+
+  .descricao p {
+    font-size: 0.9rem; /* Ajustar o tamanho da fonte dos parágrafos */
+    line-height: 24px; /* Ajustar o espaçamento das linhas */
+  }
+
+  .projeto-item {
+    padding: 8px; /* Ajustar o padding dos itens de projeto */
+  }
+
+  .github-link, .live-link {
+    font-size: 16px; /* Ajustar o tamanho dos ícones */
+  }
+
+  .email-form form {
+    padding: 0 5%; /* Ajustar o padding do formulário de email */
+  }
+
+  .container-slider {
+    width: 100%; /* Ajustar a largura do slider */
+  }
+}
