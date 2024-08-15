@@ -27,10 +27,13 @@ body {
   transition: background-color 0.3s, color 0.3s; 
 }
 .mode-icon {
-  cursor: pointer; 
-  font-size: 24px; 
-  transition: transform 0.3s ease, color 0.3s ease; 
+  cursor: pointer;
+  font-size: 20px; 
+  position: relative; /* ou absolute, dependendo da necessidade */
+  right: -20px; /* Move o elemento 20px para a esquerda */
+  transition: color 0.3s ease; /* Transição apenas para a cor */
 }
+
 
 .mode-icon:hover {
   transform: scale(1.2); 
@@ -72,14 +75,10 @@ h2 {
 
 /* Estilo da imagem de perfil */
 .perfil-img {
-  display: flex;
-  align-items: center;
   height: auto;
   max-height: 100%;
-  border-radius: 10px;
-  margin: auto;
+  margin-left: auto; /* Empurra o elemento para a direita */
 }
-
 /* Estilo do cabeçalho com logo */
 header.logo {
   background: var(--cor-fundo-claro);
@@ -117,7 +116,7 @@ span {
 .menu {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -176,11 +175,11 @@ section {
 
 .descricao p {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   width: 620px;
   max-width: 100%;
   color: var(--cor-texto-escuro);
-  line-height: 30px;
+  line-height: 20px;
   margin-bottom: 15px;
 }
 
@@ -192,8 +191,8 @@ section {
   background: var(--outra-cor-secundaria);
   color: var(--cor-texto-claro);
   border-radius: 5px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: bold;
   transition: all 0.50s ease;
 }
 
@@ -292,7 +291,6 @@ section {
   background-color: var(--cor-texto-escuro);
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   width: 100%; /* Ocupa 100% do espaço disponível na coluna */
   height: 100%; /* Garante que todas as caixas tenham a mesma altura */
   display: flex;
@@ -375,7 +373,7 @@ section {
 .container-slider {
   display: flex;
   width: 100%;
-  min-height: 60vh;
+  min-height: 50vh;
   align-items: center;
   justify-content: center;
   gap: 1rem;
@@ -394,9 +392,12 @@ section {
   transition: opacity .2s;
   position: absolute;
   width: 100%;
+  width: 550px; /* Ajuste para a largura desejada */
+  height: auto; /* Ajuste a altura conforme necessário */
   border-radius: 10px;
   z-index: 1;
 }
+
 
 .on {
   opacity: 1;
@@ -413,7 +414,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; 
+  border-radius: 50%;
+  margin-left: -26px;
+  margin-right: -26px;
 }
 
 .prev-button i, 
@@ -462,7 +465,6 @@ form textarea {
   margin-bottom: 15px;
   border-radius: 8px;
   font-size: 15px;
-  font-weight: 500;
 }
 
 form input::placeholder,

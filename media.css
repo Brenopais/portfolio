@@ -8,20 +8,76 @@
 /* Dispositivos médios (tablets) */
 @media (max-width: 1023px) and (min-width: 768px) {
   header {
-    padding: 20px 8%; /* Reduzir o padding no header */
+    padding: 25px 7%; /* Reduzir o padding no header */
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  .descricao h4 {
+    font-size: 20px;
+  }
+
+  .menu a {
+    font-size: 13px;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
   }
 
   .descricao h1 {
-    font-size: 60px; /* Reduzir o tamanho da fonte dos títulos */
+    font-size: 35px; 
   }
 
   .descricao p {
-    width: 90%; /* Ajustar a largura do parágrafo */
-    line-height: 28px; /* Ajustar o espaçamento das linhas */
+    width: 100%; 
   }
 
   .projeto-grid {
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas em tablets */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .social i {
+    width: 35px;
+    height: 35px;
+  }
+
+  .perfil-img {
+    max-height: 90%;
+  }
+
+
+  .habilidades h2 {
+    font-size: 30px;
+  }
+  .skill-card {
+  padding: 5px;
+  width: 179px;
+  }
+  .skills-container {
+  padding: 2rem;
+  }
+
+.section-title {
+  font-size: 30px;
+  padding: 2rem;
+  }
+.projeto-title {
+  font-size: 20px;
+  }
+
+  .scroll-inicio {
+  width: 35px;
+    height: 35px;
+  }
+  .conteiner-texto h2 {
+  font-size: 30px;
+  }
+
+  .copyright p {
+  font-size: 14px;
   }
 }
 
