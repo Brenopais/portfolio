@@ -1,6 +1,6 @@
 # Portfólio de Desenvolvedor Web
 
-![Descrição da Imagem](src/img/proj1.jpg)
+![Descrição da Imagem](img/proj1.jpg)
 
 Este é o repositório do meu portfólio pessoal como desenvolvedor web. Ele inclui informações sobre mim, meus projetos, habilidades e formas de entrar em contato.
 
