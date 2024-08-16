@@ -107,7 +107,7 @@
   }
 
   .descricao h1 {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .descricao p {
@@ -155,9 +155,7 @@
     padding: 5px 10px;
     font-size: 12px;
   }
-  .nav {
-    width: 80%;
-  }
+
 
   .fa-solid, .fas{
     font-size: 25px;
@@ -213,7 +211,7 @@
 /* Dispositivos pequenos (celulares) */
 @media (max-width: 604px) and (min-width: 200px) {
   header {
-    padding: 20px 10%;
+    padding: 20px 90%;
     position: fixed; 
   }
 
@@ -234,7 +232,7 @@
   }
 
   .descricao h1 {
-    font-size: 36px; 
+    font-size: 26px; 
   }
 
   .descricao p {
