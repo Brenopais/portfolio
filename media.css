@@ -5,7 +5,7 @@
   }
 }
 
-/* Dispositivos médios (tablets) */
+/* Dispositivos médios (tablets) concluido*/ 
 @media (max-width: 1023px) and (min-width: 768px) {
   header {
     padding: 25px 7%; /* Reduzir o padding no header */
@@ -28,7 +28,7 @@
   }
 
   .descricao h1 {
-    font-size: 35px; 
+    font-size: 34px; 
   }
 
   .descricao p {
@@ -40,14 +40,13 @@
   }
 
   .social i {
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
   }
 
   .perfil-img {
-    max-height: 90%;
+    max-height: 68%;
   }
-
 
   .habilidades h2 {
     font-size: 30px;
@@ -60,11 +59,11 @@
   padding: 2rem;
   }
 
-.section-title {
+  .section-title {
   font-size: 30px;
   padding: 2rem;
   }
-.projeto-title {
+  .projeto-title {
   font-size: 20px;
   }
 
@@ -82,85 +81,255 @@
 }
 
 /* Dispositivos pequenos (celulares) */
-@media (max-width: 767px) {
+@media (max-width: 767px) and (min-width: 605px) {
   header {
-    padding: 15px 5%; /* Reduzir ainda mais o padding no header */
+    padding: 20px 10%; /* Reduzir o padding no header */
   }
 
   .logo {
-    font-size: 22px; /* Diminuir o tamanho da fonte do logo */
+    display: none;
   }
 
   .menu {
-    display: none; /* Esconder o menu no header em dispositivos pequenos */
+    gap: 0px;
+  }
+
+
+  .menu a {
+    font-size: 15px;
+  }
+
+  .descricao h4 {
+    font-size: 17px;
   }
 
   .descricao h1 {
-    font-size: 48px; /* Reduzir o tamanho da fonte dos títulos */
+    font-size: 28px; /* Reduzir o tamanho da fonte dos títulos */
   }
 
   .descricao p {
+    font-size: 12px; /* Ajustar o tamanho da fonte dos parágrafos */
+    line-height: 22px; /* Ajustar o espaçamento das linhas */
     width: 100%; /* Parágrafo ocupar toda a largura da tela */
-    line-height: 26px; /* Ajustar o espaçamento das linhas */
-  }
-
-  .meubotao,
-  .meubotao2 {
-    padding: 8px 16px; /* Ajustar o padding dos botões */
   }
 
   .projeto-grid {
     grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
-    gap: 10px; /* Ajustar o espaçamento entre os projetos */
+    gap: 8px; /* Ajustar o espaçamento entre os projetos */
+  }
+
+  .social i {
+    width: 22px; /* Ajustado para dispositivos pequenos */
+    height: 22px;
+  }
+
+  .perfil-img {
+    max-height: 50%; /* Ajustar a altura da imagem de perfil */
+  }
+
+  .habilidades h2 {
+    font-size: 25px; /* Tamanho menor para títulos das habilidades */
+  }
+
+  .skill-card h3 {
+    font-size: 12px;
   }
 
   .skill-card {
-    width: 100%; /* Ajustar largura das skills para ocupar 100% */
+    padding: 4px; /* Padding dos cards */
+    width: 130px; /* Largura dos cards ajustada */
   }
 
-  .container-slider {
-    width: 90%; /* Ajustar a largura do container do slider */
+  .skills-container {
+    padding: 2rem; /* Padding do container de habilidades */
+  }
+
+  .section-title {
+    font-size: 25px; /* Ajustado para dispositivos pequenos */
+    padding: 1rem; /* Padding das seções */
+  }
+
+  .meubotao, .meubotao2 {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .nav {
+    width: 80%;
+  }
+
+  .fa-solid, .fas{
+    font-size: 25px;
+  }
+
+  .skill-card i {
+    font-size: 25px;
+  }
+
+  .projeto-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite múltiplas linhas */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se o contêiner tiver altura */
+    gap: 10px; /* Espaçamento entre itens */
+  }
+
+  .projeto-title {
+    font-size: 16px; /* Tamanho do título dos projetos ajustado */
+  }
+
+  .projeto-description {
+    font-size: 12px;
   }
 
   .prev-button, .next-button {
-    width: 35px; /* Ajustar o tamanho dos botões do slider */
-    height: 35px;
-    font-size: 30px;
+    width: 38px;
+    height: 38px;
   }
 
   .scroll-inicio {
-    width: 40px; /* Ajustar o tamanho do botão de scroll para cima */
-    height: 40px;
-    font-size: 25px;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
-/* Dispositivos extra pequenos (celulares menores) */
-@media (max-width: 480px) {
-  .descricao h1 {
-    font-size: 36px; /* Reduzir o tamanho da fonte dos títulos ainda mais */
+    width: 28px; /* Tamanho do botão de scroll */
+    height: 28px;
   }
 
-  .descricao p {
-    font-size: 0.9rem; /* Ajustar o tamanho da fonte dos parágrafos */
-    line-height: 24px; /* Ajustar o espaçamento das linhas */
-  }
-
-  .projeto-item {
-    padding: 8px; /* Ajustar o padding dos itens de projeto */
-  }
-
-  .github-link, .live-link {
-    font-size: 16px; /* Ajustar o tamanho dos ícones */
-  }
-
-  .email-form form {
-    padding: 0 5%; /* Ajustar o padding do formulário de email */
+  .slider {
+    width: 415px;
   }
 
   .container-slider {
-    width: 100%; /* Ajustar a largura do slider */
+    min-height: 30vh;
+  }
+
+  .conteiner-texto h2 {
+    font-size: 25px; 
+  }
+
+  .copyright p {
+    font-size: 10px; 
+  }
+  
+}
+/* Dispositivos pequenos (celulares) */
+@media (max-width: 604px) and (min-width: 300px) {
+  header {
+    padding: 20px 10%; 
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    gap: 0px;
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+  .descricao h4 {
+    font-size: 20px;
+  }
+
+  .descricao h1 {
+    font-size: 38px; 
+  }
+
+  .descricao p {
+    font-size: 14px; 
+    line-height: 1rem; 
+    width: 100%; 
+  }
+
+  .projeto-grid {
+    grid-template-columns: 1fr; 
+    gap: 8px; 
+  }
+
+  .social i {
+    width: 22px; 
+    height: 22px;
+  }
+
+  .perfil-img {
+    display: none; 
+  }
+
+  .habilidades h2 {
+    font-size: 25px; 
+  }
+
+  .skill-card h3 {
+    font-size: 12px;
+  }
+
+  .skill-card {
+    padding: 4px; 
+    width: 130px;
+  }
+
+  .skills-container {
+    padding: 2rem; 
+  }
+  .section-title {
+    font-size: 25px; 
+    padding: 1rem; 
+  }
+
+  .meubotao, .meubotao2 {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .nav {
+    width: 80%;
+  }
+
+  .fa-solid, .fas {
+    font-size: 20px;
+  }
+
+  .skill-card i {
+    font-size: 25px;
+  }
+
+  .projeto-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+  }
+
+  .projeto-title {
+    font-size: 16px; 
+  }
+
+  .projeto-description {
+    font-size: 12px;
+  }
+
+  .prev-button, .next-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .scroll-inicio {
+    width: 28px; 
+    height: 28px;
+  }
+
+  .slider {
+    width: 350px;
+  }
+
+  .container-slider {
+    min-height: 30vh;
+  }
+
+  .conteiner-texto h2 {
+    font-size: 25px;
+  }
+
+  .copyright p {
+    font-size: 10px; 
   }
 }
