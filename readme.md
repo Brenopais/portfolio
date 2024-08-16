@@ -26,9 +26,5 @@ Você pode acessar o meu portfólio online [aqui](https://brenopais.github.io/po
 Contribuições são bem-vindas! Se você encontrou algum problema, tem sugestões ou melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 ## Licença
-Este projeto está licenciado
-
-Certifique-se de substituir os placeholders (`seu-site.com`, `seu-usuario`, `seu-repositorio`, etc.) com os detalhes específicos do seu projeto. A captura de tela (`screenshot.png`) deve ser adicionada na mesma pasta do arquivo README.md para que o link funcione corretamente.
-
-Espero que isso te ajude a criar um README completo e informativo para o seu portfólio de desenvolvedor web!
+Este projeto está licenciado.
 
