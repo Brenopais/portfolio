@@ -1,14 +1,15 @@
 /* Dispositivos grandes (desktops) */
 @media (min-width: 1024px) {
   .projeto-grid {
-    grid-template-columns: repeat(3, 1fr); /* Três colunas para grandes telas */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 /* Dispositivos médios (tablets) concluido*/ 
 @media (max-width: 1023px) and (min-width: 768px) {
   header {
-    padding: 25px 7%; /* Reduzir o padding no header */
+    padding: 25px 7%;
+    position: fixed; 
   }
 
   .logo {
@@ -45,7 +46,8 @@
   }
 
   .perfil-img {
-    max-height: 68%;
+        display: none;
+
   }
 
   .habilidades h2 {
@@ -83,7 +85,8 @@
 /* Dispositivos pequenos (celulares) */
 @media (max-width: 767px) and (min-width: 605px) {
   header {
-    padding: 20px 10%; /* Reduzir o padding no header */
+    padding: 20px 10%;
+    position: fixed;
   }
 
   .logo {
@@ -104,31 +107,30 @@
   }
 
   .descricao h1 {
-    font-size: 28px; /* Reduzir o tamanho da fonte dos títulos */
+    font-size: 28px;
   }
 
   .descricao p {
-    font-size: 12px; /* Ajustar o tamanho da fonte dos parágrafos */
-    line-height: 22px; /* Ajustar o espaçamento das linhas */
-    width: 100%; /* Parágrafo ocupar toda a largura da tela */
+    font-size: 12px;
+    line-height: 22px;     width: 100%; 
   }
 
   .projeto-grid {
-    grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
-    gap: 8px; /* Ajustar o espaçamento entre os projetos */
+    grid-template-columns: 1fr; 
+    gap: 8px; 
   }
 
   .social i {
-    width: 22px; /* Ajustado para dispositivos pequenos */
+    width: 22px; 
     height: 22px;
   }
 
   .perfil-img {
-    max-height: 50%; /* Ajustar a altura da imagem de perfil */
+    display: none; 
   }
 
   .habilidades h2 {
-    font-size: 25px; /* Tamanho menor para títulos das habilidades */
+    font-size: 25px;
   }
 
   .skill-card h3 {
@@ -136,17 +138,17 @@
   }
 
   .skill-card {
-    padding: 4px; /* Padding dos cards */
-    width: 130px; /* Largura dos cards ajustada */
+    padding: 4px; 
+    width: 130px; 
   }
 
   .skills-container {
-    padding: 2rem; /* Padding do container de habilidades */
+    padding: 2rem; 
   }
 
   .section-title {
-    font-size: 25px; /* Ajustado para dispositivos pequenos */
-    padding: 1rem; /* Padding das seções */
+    font-size: 25px; 
+    padding: 1rem; 
   }
 
   .meubotao, .meubotao2 {
@@ -167,14 +169,14 @@
 
   .projeto-container {
     display: flex;
-    flex-wrap: wrap; /* Permite múltiplas linhas */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente, se o contêiner tiver altura */
-    gap: 10px; /* Espaçamento entre itens */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
   }
 
   .projeto-title {
-    font-size: 16px; /* Tamanho do título dos projetos ajustado */
+    font-size: 16px; 
   }
 
   .projeto-description {
@@ -187,7 +189,7 @@
   }
 
   .scroll-inicio {
-    width: 28px; /* Tamanho do botão de scroll */
+    width: 28px; 
     height: 28px;
   }
 
@@ -206,12 +208,13 @@
   .copyright p {
     font-size: 10px; 
   }
-  
+
 }
 /* Dispositivos pequenos (celulares) */
-@media (max-width: 604px) and (min-width: 300px) {
+@media (max-width: 604px) and (min-width: 200px) {
   header {
-    padding: 20px 10%; 
+    padding: 20px 10%;
+    position: fixed; 
   }
 
   .logo {
@@ -231,11 +234,11 @@
   }
 
   .descricao h1 {
-    font-size: 38px; 
+    font-size: 36px; 
   }
 
   .descricao p {
-    font-size: 14px; 
+    font-size: 12px; 
     line-height: 1rem; 
     width: 100%; 
   }
@@ -268,7 +271,7 @@
   }
 
   .skills-container {
-    padding: 2rem; 
+    padding: 1rem; 
   }
   .section-title {
     font-size: 25px; 
@@ -318,7 +321,7 @@
   }
 
   .slider {
-    width: 350px;
+    width: 250px;
   }
 
   .container-slider {
@@ -331,5 +334,9 @@
 
   .copyright p {
     font-size: 10px; 
+  }
+
+  .menu li {
+    margin-left: 10px;
   }
 }
